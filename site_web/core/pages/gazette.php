@@ -1,5 +1,5 @@
 
-<div id="tabs">
+<div id="tabs" class="tabs_rose">
 		<ul>
 			<li><a href="#tabs-1" title="">Gazette!</a></li>
 			<li><button id="but_cancel"><img src="css/media/img/wrong.png" /></button></li>
@@ -8,16 +8,16 @@
 		<div id="tabs_container">
 			
 
-			<div id="tabs-1">
+			<div id="tabs-1" class="tabs_rose">
 				Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus.
 			</div>
 
-			<div id="tabs-2">
+			<div id="tabs-2" class="tabs_rose">
 				   Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus.
 		
 			</div>
 
-			<div id="tabs-3">
+			<div id="tabs-3" class="tabs_rose">
 				    Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus.
 			</div>
 

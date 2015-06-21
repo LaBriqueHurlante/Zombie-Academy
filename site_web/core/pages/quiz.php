@@ -19,15 +19,15 @@
 			</div>
 
 		</div><!--End tabs container-->
-<img id="imgTest" src="../site_web/css/media/img/zombie2.png" />			
+<!--<img id="imgTest" src="../site_web/css/media/img/zombie2.png" />-->			
 	</div><!--End tabs-->
 <script>
 	
-$('#imgTest').hide();
+//$('#imgTest').hide();
 $(document).ready(function() {
-	$('#imgTest').show().delay( 100 ).animate({
-		top:'10px'
-		});	
+	//$('#imgTest').show().delay( 100 ).animate({
+		//top:'10px'
+		//});	
 	
 $( "#but_cancel" ).click(function( event ) {
   event.preventDefault();

@@ -67,12 +67,12 @@ if ($id==0)
 
 // Image animation + Fermeture de la vignette via Bouton CLOSE
 
-$('#imgTest').hide();
+//$('#imgTest').hide();
 $(document).ready(function() {
 	
-	$('#imgTest').show().delay( 100 ).animate({
+	/*$('#imgTest').show().delay( 100 ).animate({
 		top:'10px'
-		});
+		});*/
 
 $( "#but_cancel" ).click(function( event ) {
   event.preventDefault();

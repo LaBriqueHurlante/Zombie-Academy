@@ -6,7 +6,7 @@
 
         $.ajax({
         type : "GET",
-        url : "search_result.php",
+        url : "core/cours/search_result.php",
         data : data,
         success: function(server_response){
 
