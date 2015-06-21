@@ -26,36 +26,47 @@ if ($id>0)
 	echo ' : ';
 	echo '<a href="core/connexion/deconnexion.php">Déconnexion</a>';
 	echo ' - ';
-	echo '<a href="../profile/profile.php"> Votre profile </a>';
+	echo '<a href="../profile/profile.php"> Votre profil </a>';
 	echo ' - ';
+	echo 'Déjà connecté';
 
 }
 if ($id==0) 
 {
-	echo '<form method="post" action="core/connexion/connexion.php">
+	?>
+	<form id="login_form" onsubmit="return false;">
 		<fieldset>
 			<legend>Connexion</legend>
 				<p>
-					<label for="pseudo">Pseudo :</label><input name="pseudo" type="text" id="pseudo" /><br />
-					<label for="password">Mot de Passe :</label><input type="password" name="password" id="password" />
+					<label for="pseudo">Pseudo :</label><input name="pseudo" type="text" id="login" /><br />
+					<label for="password">Mot de Passe :</label><input type="password" name="password" id="mdp" />
 				</p>
 		</fieldset>
+        
+        <span id="status2" style="color:#D43F42;"></span>
 
-		<p><input type="submit" value="Connexion" /></p></form>
+		<p><input type="submit" id="bRegister" class="btn btn-success" value="Connexion" /></p>
+        </form>
 		<a href="../inscription/inscription.php">Pas encore inscrit ?</a>';
+     <?php
 }
-$titre = "Zombie Academy accueil";
-?>	
-                
-			</div>
-            
+?>	              
+			</div>           
 		</div><!--End tabs container-->
-<img id="imgTest" src="../site_web/css/media/img/zombie.png" />		
+        
+<img id="imgTest" src="../site_web/css/media/img/zombie.png" />	
+	
 	</div><!--End tabs-->
 
 </div><!--main wrapper-->
 
+
+
+
 <script>
+
+// Image animation + Fermeture de la vignette via Bouton CLOSE
+
 $('#imgTest').hide();
 $(document).ready(function() {
 	
@@ -70,3 +81,45 @@ $( "#but_cancel" ).click(function( event ) {
 })
 </script>
 
+			<script>
+				$(document).ready(function(){
+					
+				
+					$("#login_form").submit(function(){
+						var pseudo = $("#login").val();
+						var password   = $("#mdp").val();
+						var status = $("#status2");	
+						
+						if(pseudo == "" || password == ""){
+							status.html("Veuillez remplir tous les champs.").fadeIn(400);	
+						} else {
+							$.ajax({
+								type: 'post',
+								url: "core/connexion/connexion.php",
+								data: {
+									'pseudo' : pseudo,
+									'password' : password
+								},
+								beforeSend: function(){
+									status.html("Connexion en cours...").fadeIn(400);
+								},
+								success: function(data){
+									
+										if(data != "register_success"){
+												status.html(data).fadeIn(400);
+												$("#bRegister").attr("value", "Connection");
+												status.html("Vous êtes bien connecté!").fadeIn(400);
+												$("#bRegister").addClass("btn-primary").css("color", "#ffffff");
+												
+												setTimeout(function(){
+												  $( "#vignette" ).hide("slide", { direction: "up" }, "fast");
+												}, 1000);
+												
+											} else {}
+									
+								}
+							});
+						}
+					});
+				});
+			</script>

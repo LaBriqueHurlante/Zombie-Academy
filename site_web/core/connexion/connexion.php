@@ -3,7 +3,6 @@ session_start();
 $titre="Connexion";
 include("includes/connexBDD.php");
 
-define('ERR_IS_CO','Vous êtes déja connecté');
 echo '<h1>Connexion</h1>';
 
     $message='';
