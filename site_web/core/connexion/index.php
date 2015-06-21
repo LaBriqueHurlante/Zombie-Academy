@@ -8,7 +8,7 @@ session_start();
 
 <div id="main_wrapper">
 
-<div id="tabs" class="tabs_rouge">
+<div id="tabs" class="tabs_rougeFonce">
 		<ul>
 			<li><a href="#tabs-1" title="">Connexion</a></li>
             <li><button id="but_cancel"><img src="css/media/img/wrong.png" /></button></li>
@@ -17,7 +17,7 @@ session_start();
 		<div id="tabs_container">
 			
 
-			<div id="tabs-1" class="tabs_rouge">
+			<div id="tabs-1" class="tabs_rougeFonce">
 			
             <?php
 if ($id>0) 
@@ -47,7 +47,7 @@ if ($id==0)
 
 		<p><input type="submit" id="bRegister" class="btn btn-success" value="Connexion" /></p>
         </form>
-		<a href="../inscription/inscription.php">Pas encore inscrit ?</a>';
+		<a href="../inscription/inscription.php">Pas encore inscrit ?</a>
      <?php
 }
 ?>	              
@@ -111,9 +111,7 @@ $( "#but_cancel" ).click(function( event ) {
 												status.html("Vous êtes bien connecté!").fadeIn(400);
 												$("#bRegister").addClass("btn-primary").css("color", "#ffffff");
 												
-												setTimeout(function(){
-												  $( "#vignette" ).hide("slide", { direction: "up" }, "fast");
-												}, 1000);
+												fermetureAutoPage();
 												
 											} else {}
 									

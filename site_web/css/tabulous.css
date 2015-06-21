@@ -95,11 +95,6 @@ a:active,a:focus {
 
 								/*jaune*/
 
-/*#191919
-#DFE2DB
-#DFE2DB
-#FFFFFF*/
-
 .tabs_jaune .tabs_aside p {
 	background-color: #FFF056;
 	color: #191919;
@@ -122,6 +117,33 @@ a:active,a:focus {
 	background-color:#191919;
 }
 .tabs_jaune #but_cancel {background-color: #FFF056;}
+
+
+								/*Violet*/
+
+.tabs_violet .tabs_aside p {
+	background-color: #FFF056;
+	color: #191919;
+}
+.tabs_violet li a {
+	background-color: #5E165E  ;
+	color: #8B308B;
+	transition:all linear 0.2s;
+}
+.tabs_violet li a:hover {
+	background-color: #C900C9;
+	color: #5E165E ;
+	transition:all linear 0.2s;
+}
+.tabs_violet .tabulous_active {
+	color: #C900C9   !important;
+	background-color:#191919!important;	
+}
+.tabs_violet #tabs_container {
+	background-color:#191919;
+}
+.tabs_violet #but_cancel {background-color: #5E165E;}
+
 
 #imgTest {
   position: absolute;

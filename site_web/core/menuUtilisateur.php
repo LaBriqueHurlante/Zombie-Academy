@@ -1,16 +1,20 @@
 <div id="menuUti">
 
 	<ul class="nav">
-    	<li class="cerveau-avatar"><img src="css/media/img/imgAvatar/cerveauAvatar.png" /></li>
-    	<li><a class="rouge" href="../inscription/inscription.php">Inscription</a></li>
+    	
+    	
 <?php if ($id == 0) 
-{  
-
+{   echo '<li class="cerveau-avatar"><img src="css/media/img/imgAvatar/cerveauAvatar.png" /></li>';
+	echo '<li><a class="rouge" href="../inscription/inscription.php">Inscription</a></li>';
     echo '<li><a class="orange" href="../connexion/index.php">Connexion</a></li>';
 
+}else{
+	echo '<li class="cerveau-avatar"><a href="../pages/chambre.php"><img src="css/media/img/imgAvatar/cerveauAvatar.png" /></a></li>';
+	echo '<li><a class="orange" href="../connexion/deconnexion.php">Deconnexion</a></li>';
 }
+
 ?>
-        <li><a class="orange" href="../connexion/deconnexion.php">Deconnexion</a></li>
+        
         <li>
         	<?php
 				if ($id>0) 

@@ -4,12 +4,47 @@ session_destroy();
 $titre="Déconnexion";
 include("includes/header.php");
 include("includes/functions.php");
-define('ERR_IS_NOT_CO','Vous n etes pas connecté');
+define('ERR_IS_NOT_CO','Vous n etes pas connecté couillon');
 if ($id==0) erreur(ERR_IS_NOT_CO);
-
-echo '<p>Vous êtes à présent déconnecté <br />
-Cliquez <a href="'.htmlspecialchars($_SERVER['HTTP_REFERER']).'">ici</a> 
-pour revenir à la page précédente.<br />
-Cliquez <a href="./index.php">ici</a> pour revenir à la page principale</p>';
-echo '</div></body></html>';
 ?>
+
+
+<div id="tabs" class="tabs_rougeFonce">
+		<ul>
+			<li><a href="#tabs-1" title="">Déconnection</a></li>
+            <li><button id="but_cancel"><img src="css/media/img/wrong.png" /></button></li>
+		</ul>
+
+		<div id="tabs_container">
+			
+
+			<div id="tabs-1" class="tabs_rougeFonce">
+                <h1>Vous êtes à présent déconnecté</h1>
+                <p><?php echo 'Cliquez <a href="../index.php">ici</a> pour revenir à la page précédente.'  ?></p>
+			</div>
+
+            
+		</div><!--End tabs container-->
+	
+	</div><!--End tabs-->
+
+
+
+<script>
+$(document).ready(function() {
+	$("#tabs_container").animate({ 'min-height':'400px'});
+	fermetureAutoPage();
+		
+	$( "#but_cancel" ).click(function( event ) {
+	  event.preventDefault();
+	  $( "#vignette" ).hide("slide", { direction: "right" }, "fast");
+	});
+})
+
+/*function fermetureAuto(){
+	setTimeout(function(){
+			$( "#vignette" ).hide("slide", { direction: "up" }, "fast")}, 2000);
+												
+	setTimeout(function(){location.reload(true);},3000);
+	}*/
+</script>

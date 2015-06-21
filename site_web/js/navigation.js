@@ -31,7 +31,18 @@ $("#vignette").hide("slide", { direction: "left" }, "fast", function(){
 	//$("#tabs ul").prepend('<li><button id="but_cancel"><img src="css/media/img/wrong.png" /></button></li>');
 })
 }
+function fermetureAutoPage(){
+	setTimeout(function(){
+			$( "#page" ).hide("slide", { direction: "left" }, "slow")}, 1000);
+			
+	setTimeout(function(){location.reload(true);},2000);	
+	}
 
+function fermetureAuto(){
+	setTimeout(function(){
+			$( "#vignette" ).hide("slide", { direction: "up" }, "fast")}, 1000);
+			
+}
 
 
 /*function cacheVignette() {
