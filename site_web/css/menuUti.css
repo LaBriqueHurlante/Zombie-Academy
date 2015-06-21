@@ -1,0 +1,66 @@
+/* CSS Document */
+#menuUti {
+	position: absolute;
+	top: 0px;
+  	right: 0px;
+	z-index:11;
+}
+#menuUti a {
+	color:#fff;
+	text-decoration:none;
+}
+
+#menuUti .cerveau-avatar {
+  width: 100px;
+  height: 100px;
+  background-color: #D43F42;
+  border-radius: 50px;
+  border: 4px solid #fff;
+  box-sizing: border-box;
+}
+img.small_image {
+  width: 14px;
+}
+#main_wrapper form {
+	width:840px;
+    font-size: 16px;
+    /*background: #495C70;*/
+    /*padding: 30px 30px 15px 30px;*/
+    /*border: 5px solid #53687E;*/
+}
+#main_wrapper label {
+  width: 100px;
+  text-align: left;
+  position: relative;
+  display: inline-block;
+}
+#main_wrapper input {
+box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: 0;
+  display: inline-block;
+  width: 400px;
+  padding: 7px;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  background: transparent;
+  margin-bottom: 10px;
+  font: 16px Arial,Helvetica,sans-serif;
+  height: 45px;
+  text-align: left;
+}
+#main_wrapper #bRegister {
+  background-color: #5A0000;
+  display: inline-block;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-size: 14px;
+  padding: 8px 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+#main_wrapper #bRegister:hover {
+	opacity:0.8;
+}

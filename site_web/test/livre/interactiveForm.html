@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Document sans titre</title>
+<script src="jquery-1.11.3.min.js"></script>
+
+</head>
+
+<body>
+<h1>Formulaire interactif</h1>
+
+<form action="" method="POST">
+	<fieldset>
+    	<input type="text" name="userName" id="userName" value="Hurlemort" onKeyUp="getGreeting()" />
+        
+    </fieldset>
+</form>
+
+<div id="output">Alors?</div>
+<script >
+/*$(document).ready(function() {
+	function getGreeting(){
+		 userName = $('#userName').val();
+		$.post(
+		"simpleGreet.php",
+		{
+			"userName": userName
+		}, 
+		processResult
+		);
+	}
+});	
+	function processResult( data , textStatus ){
+		$("#output").html(data);
+	}*/
+
+
+/*correction*/
+$(document).ready(function() {
+});	
+
+	function getGreeting(){
+		userName = $('#userName').val();
+		$.post(
+		"simpleGreet.php",
+		{
+			"userName": userName
+		}, 
+		processResult
+		);
+	}
+	function processResult( data , textStatus ){
+		$("#output").html(data);
+	}
+
+
+
+
+
+</script>
+</body>
+</html>
