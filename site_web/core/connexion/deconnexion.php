@@ -33,18 +33,11 @@ if ($id==0) erreur(ERR_IS_NOT_CO);
 <script>
 $(document).ready(function() {
 	$("#tabs_container").animate({ 'min-height':'400px'});
-	fermetureAutoPage();
+	decoVignette();
 		
 	$( "#but_cancel" ).click(function( event ) {
 	  event.preventDefault();
 	  $( "#vignette" ).hide("slide", { direction: "right" }, "fast");
 	});
 })
-
-/*function fermetureAuto(){
-	setTimeout(function(){
-			$( "#vignette" ).hide("slide", { direction: "up" }, "fast")}, 2000);
-												
-	setTimeout(function(){location.reload(true);},3000);
-	}*/
 </script>

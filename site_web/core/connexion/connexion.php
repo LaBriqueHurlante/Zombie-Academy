@@ -3,7 +3,9 @@ session_start();
 $titre="Connexion";
 include("includes/connexBDD.php");
 
-echo '<h1>Connexion</h1>';
+//echo '<h1>Connexion</h1>';
+$_POST['pseudo']='pucksensei';
+$_POST['password']='123456';
 
     $message='';
     if (empty($_POST['pseudo']) || empty($_POST['password']) ) //Oublie d'un champ
@@ -11,6 +13,8 @@ echo '<h1>Connexion</h1>';
         $message = '<p>une erreur s\'est produite pendant votre identification.
 	Vous devez remplir tous les champs</p>
 	<p>Cliquez <a href="./connexion.php">ici</a> pour revenir</p>';
+	$rs = array("message"=>$message);
+
     }
     else //On check le mot de passe
     {
@@ -19,27 +23,28 @@ echo '<h1>Connexion</h1>';
         $query->bindValue(':pseudo',$_POST['pseudo'], PDO::PARAM_STR);
         $query->execute();
         $data=$query->fetch();
-	if ($data['password'] == sha1($_POST['password'])) // Acces OK !
-	{
-	    $_SESSION['pseudo'] = $data['pseudo'];
-	    $_SESSION['level'] = $data['niveau'];
-	    $_SESSION['id'] = $data['id_uti'];
-	    $message = '<p>Bienvenue '.$data['pseudo'].', 
-			vous êtes maintenant connecté!</p>
-			<p>Cliquez <a href="./index.php">ici</a> 
-			pour revenir à la page d accueil</p>';  
-	}
-	else // Acces pas OK !
-	{
-	    $message = '<p>Une erreur s\'est produite 
-	    pendant votre identification.<br /> Le mot de passe ou le pseudo 
-            entré n\'est pas correcte.</p><p>Cliquez <a href="./connexion.php">ici</a> 
-	    pour revenir à la page précédente
-	    <br /><br />Cliquez <a href="./index.php">ici</a> 
-	    pour revenir à la page d accueil</p>';
-	}
-    $query->CloseCursor();
+		if ($data['password'] == sha1($_POST['password'])) // Acces OK !
+		{
+			$_SESSION['pseudo'] = $data['pseudo'];
+			$_SESSION['level'] = $data['niveau'];
+			$_SESSION['id'] = $data['id_uti'];
+			$message = '<p>Bienvenue '.$data['pseudo'].', 
+				vous êtes maintenant connecté!</p>
+				<p>Cliquez <a href="./index.php">ici</a> 
+				pour revenir à la page d accueil</p>';  
+		}
+		else // Acces pas OK !
+		{
+			$message = '<p>Une erreur s\'est produite 
+			pendant votre identification.<br /> Le mot de passe ou le pseudo 
+				entré n\'est pas correcte.</p><p>Cliquez <a href="./connexion.php">ici</a> 
+			pour revenir à la page précédente
+			<br /><br />Cliquez <a href="./index.php">ici</a> 
+			pour revenir à la page d accueil</p>';
+		}
+		$query->CloseCursor();
+		$rs = array("message"=>$message,"pseudo"=>$_SESSION['pseudo'],"level"=>$_SESSION['level'],"id"=>$_SESSION['id']);
     }
-    echo $message;
+	echo json_encode($rs);
 
 ?>

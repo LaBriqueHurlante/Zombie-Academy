@@ -43,7 +43,18 @@ function fermetureAuto(){
 			$( "#vignette" ).hide("slide", { direction: "up" }, "fast")}, 1000);
 			
 }
+function decoVignette(){
+	setTimeout(function(){
+			$(".co").fadeOut('slow', function(){
+			$(".deco").fadeIn('slow');
+			$("#coOuPas").html("Vous n'êtes pas connecté");
+	});		
+			$( "#vignette" ).hide("slide", { direction: "left" }, "slow")}, 1000);
+			
+			
 
+			
+}
 
 /*function cacheVignette() {
 	$( "#but_cancel" ).click(function( event ) {

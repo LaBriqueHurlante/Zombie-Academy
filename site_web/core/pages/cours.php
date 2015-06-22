@@ -26,7 +26,7 @@ $pseudo=(isset($_SESSION['pseudo']))?$_SESSION['pseudo']:'';
       <aside id="inscription">
         <h1> Ajout : </h1>
         <!-- formulaire -->
-        <form id="insertioncours" action="ajout_cours.php" method="POST" enctype="multipart/form-data">
+        <form id="insertioncours" onsubmit="return false;" enctype="multipart/form-data">
           <p>
             <label for="titre">Titre :</label>
             <input type="text" placeholder="Entrez un titre" id="titre" name="titre" required/>
@@ -56,15 +56,14 @@ $pseudo=(isset($_SESSION['pseudo']))?$_SESSION['pseudo']:'';
             <label for="contenu">Contenu du cours :</label>
             <input type="text" style="width:500px; height:200px;" placeholder="Entrez votre contenu" id="contenu" name="contenu" required/>
             <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <input type="submit" value="Ajouter" />
+
+            <input id="resultat" type="submit" value="Ajouter" />
           </p>
         </form>
-      </aside>
+        </aside>
+        <p id="status">status</p>
+        <p id="output">output</p>
+      
     </div>
   </div>
   <!--End tabs container--> 
@@ -75,14 +74,66 @@ $pseudo=(isset($_SESSION['pseudo']))?$_SESSION['pseudo']:'';
 <script>
 //$('#imgTest').hide();
 $(document).ready(function() {
-	
-	/*$('#imgTest').show().delay( 100 ).animate({
-		top:'10px'
-		});*/
 
+	
 $( "#but_cancel" ).click(function( event ) {
   event.preventDefault();
   $( "#vignette" ).hide("slide", { direction: "right" }, "fast");
 });
 })
+</script>
+
+<script>
+
+$(document).ready(function() {
+
+					//Traitement du formulaire d'inscription
+					$("#insertioncours").submit(function(){
+						var status = $("#status");
+						var titre = $("#titre").val();
+						var avatar = $("#avatar").val();
+						var genre = $("#genre").val();
+						var tag1 = $("#tag1").val();
+						var tag2 = $("#tag2").val();
+						var tag3 = $("#tag3").val();
+						var contenu = $("#contenu").val();
+
+						if(titre == "" || avatar == "" || genre == "" || tag1 == "" || tag2 == "" || tag3 == "" || contenu == ""){
+							status.html("Veuillez remplir tous les champs").fadeIn(400);
+						} else {	
+							$.ajax({
+								type: "post",
+								url:  "core/cours/ajout_cours.php",
+								data: {
+									'titre'    : titre,
+									'avatar' : avatar,
+									'genre' : genre,
+									'tag1' : tag1,
+									'tag2' : tag2,
+									'tag3' : tag3,
+									'contenu' : contenu
+								},
+								beforeSend: function(){
+												$("#output").attr("value", "Traitement en cours...");
+											},
+								success: function(data){
+											if(data != "register_success"){
+												status.html(data).fadeIn(400);
+												$("#output").attr("value", "ajout du cours");
+												$("#inscription").fadeOut("slow", function(){
+												status.html("Votre cours a bien été ajouté, il sera soumis à la modération avant sa publication.").fadeIn(400);
+												$("#output").addClass("btn-primary").css("color", "#ffffff");
+												})
+												
+												
+											} else {
+												$("#presentation").hide();
+												$("#connexion h1").html("Connexion");
+												$("#inscription").html("<strong>Juste une dernière étape " + prenom + " " + nom + " !</strong><br/>Un lien d'activation de votre compte vient de vous être envoyé à l'adresse électronique indiquée lors de l'inscription.<br/>Veuillez tout simplement cliquer ce lien et vous serez définitivement membre du <strong>TDN SOCIAL NETWORK</strong>.<br/><em>(Pensez à vérifier vos spams ou courriers indésirables, si vous ne voyez pas ce mail dans votre boîte de réception)</em><br/><br/>Une fois que ceci est fait, vous n'aurez plus qu'à vous connecter!<br/>Alors, on se dit à très bientôt ;) !").css("width", "inherit").fadeIn(400);
+											}
+										 }
+							});
+						}
+					});
+				})
 </script>

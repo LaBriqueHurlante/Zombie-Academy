@@ -21,6 +21,11 @@
   box-sizing: border-box;
   margin: auto;
 }
+.co {display:none;}
+#menuUti li {
+  width: 150px;
+}
+
 #menuUti .cerveau-avatar img{
 	width:100%;
 }
