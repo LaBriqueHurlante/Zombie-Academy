@@ -95,10 +95,9 @@ li.logo {
   background-position: center center;
 	}
 #menu2 a img {
-  width: 32px;
+  width: 25px;
   float: left;
-  padding: 0 10px 0 0;
-
+  padding: 5px 15px 0 0;
 }
 #menu2 li:not(.logo) {
 width: 210px;
@@ -246,15 +245,15 @@ position: absolute;
 }*/
 
 .secondplan {
-background: url("../../site_web/css/media/img/campus6.jpg");
+background: url("../../site_web/css/media/img/campus10.jpg");
 background-position: center center;
   background-repeat:no-repeat;
   background-color:#000;
 position: absolute;
 width: 180%;
 height: 180%;
-left: -35%;
-top: -30%;
+left: -40%;
+top: -40%;
 }
 
 .firstplan {
@@ -291,13 +290,13 @@ position: absolute;
 	position: absolute;
 }
 #menu2 li {
-	color: #fff;
+  color: #fff;
   font-family: arial;
   font-size: 30px;
   text-align: left;
-  padding: 15px 0px 0px 15px;
+  padding: 25px 0px 0px 15px;
   display: block;
-  margin:0;
+  margin: 0;
   width: 170px;
 }
 #menu2 .logo {

@@ -19,7 +19,7 @@
 }
 if ($id == 0) 
 {
-	echo '<span id="coOuPas">Pas connecté poulet</span>';
+	echo '<span id="coOuPas">Non connecté</span>';
 }
 			?>
         </li>  

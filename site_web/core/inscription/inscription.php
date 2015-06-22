@@ -206,7 +206,9 @@ $( "#but_cancel" ).click(function( event ) {
 												status.html("Inscription réussie").fadeIn(400);
 												$("#bRegister").addClass("btn-primary").css("color", "#ffffff");
 												
-												fermetureAuto();
+												setTimeout(function(){
+												$( "#vignette" ).hide("slide", { direction: "right" }, "fast");
+												},1000)
 												
 											} else {
 												$("#presentation").hide();
