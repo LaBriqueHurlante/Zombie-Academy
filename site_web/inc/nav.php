@@ -16,11 +16,12 @@
 	<ul class="menu">
     	<li class="logo"></li>
        <!-- <li><a class="violet" href="../connexion/index2.php">Inscription</a></li>-->
-    	<li><a class="rouge" href="cours.php"><img src="../site_web/css/media/img/Books_stack_of_three_64R.png"/>Cours</a></li>
-        <li><a class="orange" href="quiz.php"><img src="../site_web/css/media/img/Signing_the_contract_64O.png"/>Quiz</a></li>
-        <li><a class="bleu" href="wikiotheque.php"><img src="../site_web/css/media/img/Grid_world_64b.png"/>Wikiothèque</a></li>
-        <li><a class="jaune" href="ateliers.php"><img src="../site_web/css/media/img/Lightbulb_idea_64j.png"/>Les Ateliers</a></li>
-        <li><a class="rose" href="gazette.php"><img src="../site_web/css/media/img/World_64r.png"/>La Gazette</a></li>      
+    	<li><a class="survol1 rouge" href="cours.php"><img src="../site_web/css/media/img/Books_stack_of_three_64R.png"/>Cours</a></li>
+        <li><a class="survol2 orange" href="quiz.php"><img src="../site_web/css/media/img/Signing_the_contract_64O.png"/>Quiz</a></li>
+        <li><a class="survol3 bleu" href="wikiotheque.php"><img src="../site_web/css/media/img/Grid_world_64b.png"/>Wikiothèque</a></li>
+        <li><a class="survol4 jaune" href="ateliers.php"><img src="../site_web/css/media/img/Lightbulb_idea_64j.png"/>Les Ateliers</a></li>
+        <li><a class="survol5 rose" href="gazette.php"><img src="../site_web/css/media/img/World_64r.png"/>La Gazette</a></li>
+        <li><a class="survol6 marron" ><img src="../site_web/css/media/img/coffee.png"/>La Cafèt'</a></li>     
     </ul>
 </nav>
 </div>

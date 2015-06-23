@@ -53,12 +53,5 @@ function decoVignette(){
 			
 			
 
-			
 }
 
-/*function cacheVignette() {
-	$( "#but_cancel" ).click(function( event ) {
-  event.preventDefault();
-  $( "#vignette" ).hide("slide", { direction: "right" }, "fast");
-});
-	}*/

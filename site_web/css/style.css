@@ -43,6 +43,7 @@ width:100%;
 .bleu:hover {color:#1E83D4}
 .rose:hover {color:#E91E63}
 .violet:hover {color:#C900C9}
+.marron:hover {color:#795548}
 
 
 /*FONTS*/
@@ -233,6 +234,203 @@ overflow: hidden;}
   .layer {
   position: absolute;
   }
+
+/* START SURVOL */
+. m_layer{}
+.m_scroll:hover{cursor:pointer;} 
+.m_scroll{z-index:101;} 
+li.layer.m_layer {
+  width: 0px;
+}
+.aside-survol {
+  position: relative;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.aside-survol img {
+  background: #fff;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 50px;
+  border: 5px solid #fff;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 4px 8px 1px;
+}
+.scrollTo1 {
+  width: 380px;
+  height: 270px;
+ /* background: red;*/
+  position: absolute;
+  top: 450px;
+  left: 190px;
+}
+.scrollTo2 {
+  width: 260px;
+  height: 210px;
+  /*background: orange;*/
+  position: absolute;
+  top: 530px;
+  left: 800px;
+}
+.scrollTo3 {
+  width: 170px;
+  height: 160px;
+  /*background: blue;*/
+  position: absolute;
+  top: 290px;
+  left: 620px;
+}
+.scrollTo4 {
+  width: 140px;
+  height: 210px;
+/*  background: yellow;*/
+  position: absolute;
+  top: 60px;
+  left: 540px;
+}
+.scrollTo5 {
+  width: 50px;
+  height: 50px;
+ /* background: #FF0088;*/
+  position: absolute;
+  top: 570px;
+  left: 1180px;
+}
+.scrollTo6 {
+  width: 110px;
+  height: 80px;
+/*  background: violet;*/
+  position: absolute;
+  top: 50px;
+  left: 380px;
+}
+.scrollTo7 {
+  width: 240px;
+  height: 100px;
+ /* background: darkred;*/
+  position: absolute;
+  top: 300px;
+  left: 220px;
+}
+.scrollTo8 {
+  width: 60px;
+  height: 70px;
+  /*background: brown;*/
+  position: absolute;
+  top: 240px;
+  left: 830px;
+}
+
+.survol-fond {
+/*background: url("../../site_web/css/media/img/imgSurvol/fond.png");*/
+background: rgba(255,255,255,0);
+background-position: center center;
+background-repeat:no-repeat;
+position: absolute;
+width: 180%;
+height: 180%;
+left: -40%;
+top: -40%;
+}
+.survol-cours {
+background: url("../../site_web/css/media/img/imgSurvol/survol-cours.png");
+background-position: center center;
+background-repeat:no-repeat;
+position: absolute;
+width: 180%;
+height: 180%;
+left: -40%;
+top: -40%;
+}
+
+.survol-quiz {
+background: url("../../site_web/css/media/img/imgSurvol/survol-quiz.png");
+background-position: center center;
+background-repeat:no-repeat;
+position: absolute;
+width: 180%;
+height: 180%;
+left: -40%;
+top: -40%;
+}
+
+.survol-wiki {
+background: url("../../site_web/css/media/img/imgSurvol/survol-wiki.png");
+background-position: center center;
+background-repeat:no-repeat;
+position: absolute;
+width: 180%;
+height: 180%;
+left: -40%;
+top: -40%;
+}
+
+.survol-ateliers {
+background: url("../../site_web/css/media/img/imgSurvol/survol-ateliers.png");
+background-position: center center;
+background-repeat:no-repeat;
+position: absolute;
+width: 180%;
+height: 180%;
+left: -40%;
+top: -40%;
+}
+
+.survol-gazette {
+background: url("../../site_web/css/media/img/imgSurvol/survol-gazette.png");
+background-position: center center;
+background-repeat:no-repeat;
+position: absolute;
+width: 180%;
+height: 180%;
+left: -40%;
+top: -40%;
+}
+
+.survol-dortoir {
+background: url("../../site_web/css/media/img/imgSurvol/survol-dortoir.png");
+background-position: center center;
+background-repeat:no-repeat;
+position: absolute;
+width: 180%;
+height: 180%;
+left: -40%;
+top: -40%;
+}
+
+.survol-dortoir {
+background: url("../../site_web/css/media/img/imgSurvol/survol-dortoir.png");
+background-position: center center;
+background-repeat:no-repeat;
+position: absolute;
+width: 180%;
+height: 180%;
+left: -40%;
+top: -40%;
+}
+
+.survol-inscription {
+background: url("../../site_web/css/media/img/imgSurvol/survol-inscription.png");
+background-position: center center;
+background-repeat:no-repeat;
+position: absolute;
+width: 180%;
+height: 180%;
+left: -40%;
+top: -40%;
+}
+
+.survol-cafette {
+background: url("../../site_web/css/media/img/imgSurvol/survol-cafette.png");
+background-position: center center;
+background-repeat:no-repeat;
+position: absolute;
+width: 180%;
+height: 180%;
+left: -40%;
+top: -40%;
+}
+
+/* END SURVOL */
 
 .secondplan {
 background: url("../../site_web/css/media/img/campus10.jpg");
