@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<qcm><titre>Titre du QCM</titre><description>Description du QCM.</description><image></image><question><q></q><image></image><explic></explic><reponses/></question></qcm>
+<qcm>
+  <titre>Titre du QCM</titre>
+  <description>Description du QCM.</description>
+  <image></image>
+  <question>
+    <q></q>
+    <image></image>
+    <explic></explic>
+    <reponses/>
+  </question>
+</qcm>

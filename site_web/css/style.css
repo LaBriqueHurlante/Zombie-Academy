@@ -234,16 +234,6 @@ overflow: hidden;}
   position: absolute;
   }
 
-/*.nuage {
-background: url("../../site_web/css/media/img/nuage.png");
-background-position: center center;
-position: absolute;
-  width: 300%;
-  height: 300%;
-  left: -110%;
-  top: -60%;
-}*/
-
 .secondplan {
 background: url("../../site_web/css/media/img/campus10.jpg");
 background-position: center center;
@@ -287,7 +277,7 @@ position: absolute;
 	padding:15px;
 }
 #menu2 ul {
-	position: absolute;
+  position: fixed;
 }
 #menu2 li {
   color: #fff;
@@ -303,8 +293,64 @@ position: absolute;
 	margin-bottom: 50px;
 }
 
+/*VARIANTE*/
 
+#film1 {
+	
+}
+#film1 li {
+width: 880px;	
+}
+#film1 .film_affiche img{
+	width:200px;
+}
+#film1 .film_video video{
+  width: 250px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
 
-
-
-
+#film1 h1 {
+  text-align: center;
+  padding-bottom: 15px;
+}
+#film1 h2 {color: #F34235;}
+#film1 #video-h2 {
+  position: absolute;
+  top: 0;
+  right: 75px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+#film1 #netflix-h2 {
+  position: absolute;
+  top: 190px;
+  right: 70px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.film_netflix img {
+  position: absolute;
+  top: 210px;
+  right: 120px;
+  width: 85px;
+}
+#film1 #sc-h2 {
+  position: absolute;
+  top: 310px;
+  right: 45px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.film_critique img {
+  width: 70px;
+  top: 340px;
+  right: 123px;
+  position: absolute;
+}
+#film1 span {
+  text-align: center;
+  padding-bottom: 15px;
+  margin:0 auto;
+}

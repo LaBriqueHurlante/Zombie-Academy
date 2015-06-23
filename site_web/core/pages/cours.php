@@ -8,7 +8,7 @@ $pseudo=(isset($_SESSION['pseudo']))?$_SESSION['pseudo']:'';
 
 <div id="tabs" class="tabs_rouge">
   <ul>
-    <li><a href="#tabs-1" title="">Cours!</a></li>
+    <li><a href="#tabs-1" title="">Cours du jour</a></li>
     <li><a href="#tabs-2" title="">Chercher un cours</a></li>
     <li><a href="#tabs-3" title="">Ajouter</a></li>
     <li>
@@ -16,7 +16,14 @@ $pseudo=(isset($_SESSION['pseudo']))?$_SESSION['pseudo']:'';
     </li>
   </ul>
   <div id="tabs_container">
-    <div id="tabs-1" class="tabs_rouge"> </div>
+    <div id="tabs-1" class="tabs_rouge">
+    
+    	<script>$("#tabs_contenu").load("../site_web/core/externe/film.html #film1");</script>
+        <section id="tabs_contenu"></section>
+        
+    </div>
+    
+    
     <div id="tabs-2" class="tabs_rouge"> <span class="wrap">
       <aside class="search">
         <input type="text" name="recherche" class="text" id="recherche"/>
@@ -71,11 +78,13 @@ $pseudo=(isset($_SESSION['pseudo']))?$_SESSION['pseudo']:'';
 </div>
 <!--End tabs--> 
 
+
+
 <script>
 //$('#imgTest').hide();
 $(document).ready(function() {
 
-	
+$("#tabs_container").animate({ 'min-height':'400px'});	
 $( "#but_cancel" ).click(function( event ) {
   event.preventDefault();
   $( "#vignette" ).hide("slide", { direction: "right" }, "fast");

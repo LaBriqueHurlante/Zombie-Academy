@@ -4,8 +4,7 @@ $titre="Connexion";
 include("includes/connexBDD.php");
 
 //echo '<h1>Connexion</h1>';
-$_POST['pseudo']='pucksensei';
-$_POST['password']='123456';
+
 
     $message='';
     if (empty($_POST['pseudo']) || empty($_POST['password']) ) //Oublie d'un champ
