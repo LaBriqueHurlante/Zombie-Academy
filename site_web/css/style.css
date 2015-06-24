@@ -246,6 +246,7 @@ li.layer.m_layer {
   position: relative;
   margin: 0 auto;
   box-sizing: border-box;
+  margin-top: 45px;
 }
 .aside-survol img {
   background: #fff;
@@ -254,6 +255,17 @@ li.layer.m_layer {
   border-radius: 50px;
   border: 5px solid #fff;
   box-shadow: rgba(0, 0, 0, 0.5) 1px 4px 8px 1px;
+}
+.aside-survol p {
+  font-family: goth;
+  text-transform: uppercase;
+  font-size: 18px;
+  background-color: #fff;
+  width: 110px;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 4px 8px 1px;
+  margin: -5px auto 0;
+  border-radius: 3px;
 }
 .scrollTo1 {
   width: 380px;
@@ -288,9 +300,9 @@ li.layer.m_layer {
   left: 540px;
 }
 .scrollTo5 {
-  width: 50px;
+  width: 120px;
   height: 50px;
- /* background: #FF0088;*/
+  /* background: #FF0088; */
   position: absolute;
   top: 570px;
   left: 1180px;
@@ -312,9 +324,9 @@ li.layer.m_layer {
   left: 220px;
 }
 .scrollTo8 {
-  width: 60px;
+  width: 120px;
   height: 70px;
-  /*background: brown;*/
+  /* background: brown; */
   position: absolute;
   top: 240px;
   left: 830px;

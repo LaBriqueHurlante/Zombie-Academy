@@ -94,16 +94,24 @@ $(document).ready(function(e) {
 
 // Apparition des batiments au survol, au cas pas cas, puisque je ne sais pas encore optimiser mes codes...
 
+//TRIGGERS statiques
+$('.scrollTo1').append("<aside class='aside-survol'><img src='../site_web/css/media/img/Books_stack_of_three_64R.png' /><p>Cours</p></aside>")
+$('.scrollTo2').append("<aside class='aside-survol'><img src='../site_web/css/media/img/Signing_the_contract_64O.png' /><p>Quiz</p></aside>")
+$('.scrollTo3').append("<aside class='aside-survol'><img src='../site_web/css/media/img/Grid_world_64b.png' /><p>Wikiothèque</p></aside>")
+$('.scrollTo4').append("<aside class='aside-survol'><img src='../site_web/css/media/img/Lightbulb_idea_64J.png' /><p>Ateliers créatifs</p></aside>")
+$('.scrollTo5').append("<aside class='aside-survol'><img src='../site_web/css/media/img/World_64r.png' /><p>La Gazette</p></aside>")
+$('.scrollTo6').append("<aside class='aside-survol'><img src='../site_web/css/media/img/dortoir.png' /><p>Chambre étudiante</p></aside>")
+$('.scrollTo7').append("<aside class='aside-survol'><img src='../site_web/css/media/img/administration.png' /><p>administration</p></aside>")
+$('.scrollTo8').append("<aside class='aside-survol'><img src='../site_web/css/media/img/coffee.png' /><p>La cafet'</p></aside>")
+
 
 //TRIGGERS sur la carte
 $('.scrollTo1').hover(
 	function(){
 	$('.survol-cours').fadeIn()
-	$(this).append("<aside class='aside-survol'><img src='../site_web/css/media/img/Books_stack_of_three_64R.png' /><p>Cours</p></aside>")
 	},
 	function(){
 		$(".survol-cours").fadeOut()
-		$(this).children(".aside-survol").remove();
 	});
 $('.scrollTo2').hover(
 	function(){
@@ -159,6 +167,7 @@ $('.scrollTo8').hover(
 // MENU
 //cours	
     $('.survol1').hover(function() {
+		
       	$(".secondplan").animate({
 		  	'left': '-30%',
   			'top': '-70%'
@@ -166,7 +175,8 @@ $('.scrollTo8').hover(
 			  $('.survol-cours').css({
 				  'left': '-30%',
   					'top': '-70%'
-				  }).fadeIn()
+				  }).fadeIn(function(){
+					  })
 			  })
 	},
 	function(){
@@ -174,12 +184,16 @@ $('.scrollTo8').hover(
 		$(".secondplan, .survol-cours").animate({
 		  	'left': '-40%',
   			'top': '-40%'
-		  },'slow')
+		  },'slow',function(){
+			  
+			  })
+		  
 			
 		});
 
 //quiz		
 	$('.survol2').hover(function() {
+		
       $(".secondplan").animate({
 		  	'left': '-60%',
   			'top': '-60%'
@@ -195,11 +209,14 @@ $('.scrollTo8').hover(
 		$(".secondplan, .survol-quiz").animate({
 		  	'left': '-40%',
   			'top': '-40%'
-		  },'slow')	
+		  },'slow',function(){
+			  
+			  })	
 		});
 
 //wiki		
 	$('.survol3').hover(function() {
+		
       $(".secondplan").animate({
 		  	'left': '-50%',
   			'top': '-50%'
@@ -215,12 +232,15 @@ $('.scrollTo8').hover(
 		$(".secondplan, .survol-wiki").animate({
 		  	'left': '-40%',
   			'top': '-40%'
-		  },'slow')	
+		  },'slow',function(){
+			  
+			  })	
 		});
 
 
 //ateliers		
 	$('.survol4').hover(function() {
+		
       $(".secondplan").animate({
 		  	'left': '-50%',
   			'top': '-10%'
@@ -236,11 +256,14 @@ $('.scrollTo8').hover(
 		$(".secondplan, .survol-ateliers").animate({
 		  	'left': '-40%',
   			'top': '-40%'
-		  },'slow')	
+		  },'slow',function(){
+			  
+			  })	
 		});
 
 //gazette		
 	$('.survol5').hover(function() {
+		
       $(".secondplan").animate({
 		  	'left': '-70%',
   			'top': '-60%'
@@ -256,11 +279,14 @@ $('.scrollTo8').hover(
 		$(".secondplan, .survol-gazette").animate({
 		  	'left': '-40%',
   			'top': '-40%'
-		  },'slow')	
+		  },'slow',function(){
+			  
+			  })	
 		});
 
 //cafette		
 	$('.survol6').hover(function() {
+		
       $(".secondplan").animate({
 		  	'left': '-60%',
   			'top': '-20%'
@@ -276,12 +302,15 @@ $('.scrollTo8').hover(
 		$(".secondplan, .survol-cafette").animate({
 		  	'left': '-40%',
   			'top': '-40%'
-		  },'slow')	
+		  },'slow',function(){
+			  
+			  })	
 		});
 
 
 //dortoir		
 	$('.survol7').hover(function() {
+		
       $(".secondplan").animate({
 		  	'left': '-10%',
   			'top': '0%'
@@ -297,11 +326,13 @@ $('.scrollTo8').hover(
 		$(".secondplan, .survol-dortoir").animate({
 		  	'left': '-40%',
   			'top': '-40%'
-		  },'slow')	
+		  },'slow',function(){
+			  
+			  })	
 		});
 
 //administration		
-	$('.survol8').hover(function() {
+	/*$('.survol8').hover(function() {
       $(".secondplan").animate({
 		  	'left': '0%',
   			'top': '-20%'
@@ -318,7 +349,16 @@ $('.scrollTo8').hover(
 		  	'left': '-40%',
   			'top': '-40%'
 		  },'slow')	
-		});
+		});*/
+
+//gestion des icones (à cause du menu)
+/*$('nav a').hover(function(){
+	$('.aside-survol').hide()
+	},	
+	function(){
+	$('.aside-survol').show()	
+	})
+*/
 });
 
 /*
