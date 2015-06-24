@@ -26,22 +26,35 @@ $pseudo=(isset($_SESSION['pseudo']))?$_SESSION['pseudo']:'';
     
     <div id="tabs-2" class="tabs_rouge"> <span class="wrap">
       <aside class="search">
-        <input type="text" name="recherche" class="text" id="recherche"/>
+      <h2>Recherche</h2>
+        <input type="text" name="recherche" class="film_recherche text" id="recherche"/>
       </aside>
       <span class="resultat" id="resultat"></span> </span> </div>
     <div id="tabs-3" class="tabs_rouge">
       <aside id="inscription">
-        <h1> Ajout : </h1>
+        
         <!-- formulaire -->
         <form id="insertioncours" onsubmit="return false;" enctype="multipart/form-data">
-          <p>
+        
+        
+        <section id="inscription_section1">
+        	<h1>Ajouter un cours</h1>
+            <input type="text" style="height:200px;" placeholder="Entrez votre contenu" id="contenu" name="contenu" required/>
+            <input id="resultat" type="submit" value="Ajouter" />
+        </section>
+        
+        <section id="inscription_section2">
+            <p>
             <label for="titre">Titre :</label>
             <input type="text" placeholder="Entrez un titre" id="titre" name="titre" required/>
-            <br>
-            <br>
+            </p>
+ 
+            <p>
             <input type="hidden" name="MAX_FILE_SIZE" value="100000">
-            Fichier :
+            <label for="titre">Fichier :</label>
             <input type="file" name="avatar" id="avatar">
+            </p>
+            <p>
             Genre:
             <SELECT name="genre" id="genre" size="1">
               <OPTION>Film
@@ -50,26 +63,20 @@ $pseudo=(isset($_SESSION['pseudo']))?$_SESSION['pseudo']:'';
               <OPTION>Jeu-video
               <OPTION>Comics
             </SELECT>
-            <br>
-            <br>
-            <label for="tag1">Tag :</label>
+            </p>
+            <p>
+            <label for="tag1">Tags :</label>
             <input type="text" placeholder="Entrez tag1" id="tag1" name="tag1" maxlength="16" required/>
-            <label for="tag2"></label>
+            
             <input type="text" placeholder="Entrez tag2" id="tag2" name="tag2" maxlength="16" required/>
-            <label for="tag3"></label>
+            
             <input type="text" placeholder="Entrez tag3" id="tag3" name="tag3" maxlength="16" required/>
-            <br>
-            <br>
-            <label for="contenu">Contenu du cours :</label>
-            <input type="text" style="width:500px; height:200px;" placeholder="Entrez votre contenu" id="contenu" name="contenu" required/>
-            <br>
-
-            <input id="resultat" type="submit" value="Ajouter" />
-          </p>
+            </p>
+        </section>
         </form>
         </aside>
-        <p id="status">status</p>
-        <p id="output">output</p>
+        <span id="status"></span>
+        <span id="output"></span>
       
     </div>
   </div>
@@ -84,7 +91,7 @@ $pseudo=(isset($_SESSION['pseudo']))?$_SESSION['pseudo']:'';
 //$('#imgTest').hide();
 $(document).ready(function() {
 
-$("#tabs_container").animate({ 'min-height':'400px'});	
+$(" #tabs_container ").animate({ 'height':'500px'});	
 $( "#but_cancel" ).click(function( event ) {
   event.preventDefault();
   $( "#vignette" ).hide("slide", { direction: "right" }, "fast");

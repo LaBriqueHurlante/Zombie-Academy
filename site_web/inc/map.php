@@ -5,7 +5,7 @@
 
 
 <div id="container" class="container">
-  <ul id="scene" class="scene">
+  <ul id="scene" class="scene nav">
 
 <!-- START SURVOL -->
 
@@ -37,6 +37,30 @@
       <div class="m_scroll scrollTo8"/>
 
 
+
+	<!-- Icones -->
+	<li class="layer" data-depth="2.00" style="z-index:99;">
+      <div class="icon-cours map-icones"/>
+	
+    <li class="layer" data-depth="2.00" style="z-index:99;">
+      <div class="icon-quiz map-icones"/>
+
+	 <li class="layer" data-depth="2.00" style="z-index:99;">
+      <div class="icon-wiki map-icones"/>
+      
+      <li class="layer" data-depth="2.00" style="z-index:99;">
+      <div class="icon-ateliers map-icones"/>
+      
+      <li class="layer" data-depth="2.00" style="z-index:99;">
+      <div class="icon-gazette map-icones"/>
+      
+      <li class="layer" data-depth="2.00" style="z-index:99;">
+      <div class="icon-cafette map-icones"/>
+      
+      <li class="layer" data-depth="2.00" style="z-index:99;">
+      <div class="icon-dortoir map-icones"/>
+      
+      
 	<!-- Batiments -->
 	
 	<li class="layer" data-depth="2.00" style="z-index:2;">
@@ -71,7 +95,7 @@
       <div class="secondplan" />
 
 
-      <li class="layer" data-depth="0.00" style="z-index:99;">
+      <li class="layer" data-depth="0.00" style="z-index:98;">
         <div class="firstplan" />
       </li>
   </ul>
@@ -80,29 +104,8 @@
 <script>
 $('.map_layer').hide();
 $(document).ready(function(e) {
-// fond blanc transparent au survol des liens du menu	
-	/*$('nav a').hover(function(){
-		$(".survol-fond").fadeIn().animate({
-		  'background-color':'rgba(0, 0, 0, 0.4)'
-		  },'fast')
-		  },
-	function(){
-		$(".survol-fond").fadeOut().animate({
-		  'background-color':'rgba(0, 0, 0, 0.0)'
-		  },'fast')	
-		});*/
 
 // Apparition des batiments au survol, au cas pas cas, puisque je ne sais pas encore optimiser mes codes...
-
-//TRIGGERS statiques
-$('.scrollTo1').append("<aside class='aside-survol'><img src='../site_web/css/media/img/Books_stack_of_three_64R.png' /><p>Cours</p></aside>")
-$('.scrollTo2').append("<aside class='aside-survol'><img src='../site_web/css/media/img/Signing_the_contract_64O.png' /><p>Quiz</p></aside>")
-$('.scrollTo3').append("<aside class='aside-survol'><img src='../site_web/css/media/img/Grid_world_64b.png' /><p>Wikiothèque</p></aside>")
-$('.scrollTo4').append("<aside class='aside-survol'><img src='../site_web/css/media/img/Lightbulb_idea_64J.png' /><p>Ateliers créatifs</p></aside>")
-$('.scrollTo5').append("<aside class='aside-survol'><img src='../site_web/css/media/img/World_64r.png' /><p>La Gazette</p></aside>")
-$('.scrollTo6').append("<aside class='aside-survol'><img src='../site_web/css/media/img/dortoir.png' /><p>Chambre étudiante</p></aside>")
-$('.scrollTo7').append("<aside class='aside-survol'><img src='../site_web/css/media/img/administration.png' /><p>administration</p></aside>")
-$('.scrollTo8').append("<aside class='aside-survol'><img src='../site_web/css/media/img/coffee.png' /><p>La cafet'</p></aside>")
 
 
 //TRIGGERS sur la carte
@@ -164,210 +167,218 @@ $('.scrollTo8').hover(
 	});
 
 
+
 // MENU
 //cours	
     $('.survol1').hover(function() {
-		
+		$('.map-icones,.survol-cours').hide();
       	$(".secondplan").animate({
 		  	'left': '-30%',
   			'top': '-70%'
 		  },'fast',function(){
-			  $('.survol-cours').css({
+			  $('.survol-cours,.map-icones').css({
 				  'left': '-30%',
   					'top': '-70%'
 				  }).fadeIn(function(){
+					 $('.map-icones').fadeIn(); 		
 					  })
 			  })
 	},
 	function(){
-		$(".survol-cours").hide()
-		$(".secondplan, .survol-cours").animate({
+		$(".survol-cours,.map-icones").hide()
+		$(".secondplan").animate({
 		  	'left': '-40%',
   			'top': '-40%'
-		  },'slow',function(){
-			  
-			  })
-		  
-			
+		  },'slow',function(){	
+		  	$('.survol-cours,.map-icones').css({
+				  'left': '-40%',
+  					'top': '-40%'
+				  })
+					 $('.map-icones').fadeIn(); 		 
+		  })
+				
 		});
 
 //quiz		
-	$('.survol2').hover(function() {
-		
-      $(".secondplan").animate({
+    $('.survol2').hover(function() {
+		$('.map-icones,.survol-quiz').hide();
+      	$(".secondplan").animate({
 		  	'left': '-60%',
   			'top': '-60%'
 		  },'fast',function(){
-			  $('.survol-quiz').css({
+			  $('.survol-quiz,.map-icones').css({
 				  'left': '-60%',
   					'top': '-60%'
-				  }).fadeIn()
+				  }).fadeIn(function(){
+					 $('.map-icones').fadeIn(); 		
+					  })
 			  })
 	},
 	function(){
-		$(".survol-quiz").hide()
-		$(".secondplan, .survol-quiz").animate({
+		$(".survol-quiz,.map-icones").hide()
+		$(".secondplan").animate({
 		  	'left': '-40%',
   			'top': '-40%'
-		  },'slow',function(){
-			  
-			  })	
+		  },'slow',function(){	
+		  	$('.survol-quiz,.map-icones').css({
+				  'left': '-40%',
+  					'top': '-40%'
+				  })
+					 $('.map-icones').fadeIn(); 		 
+		  })
+				
 		});
 
 //wiki		
-	$('.survol3').hover(function() {
-		
-      $(".secondplan").animate({
+    $('.survol3').hover(function() {
+		$('.map-icones,.survol-wiki').hide();
+      	$(".secondplan").animate({
 		  	'left': '-50%',
   			'top': '-50%'
 		  },'fast',function(){
-			  $('.survol-wiki').css({
+			  $('.survol-wiki,.map-icones').css({
 				  'left': '-50%',
   					'top': '-50%'
-				  }).fadeIn()
+				  }).fadeIn(function(){
+					 $('.map-icones').fadeIn(); 		
+					  })
 			  })
 	},
 	function(){
-		$(".survol-wiki").hide()
-		$(".secondplan, .survol-wiki").animate({
+		$(".survol-wiki,.map-icones").hide()
+		$(".secondplan").animate({
 		  	'left': '-40%',
   			'top': '-40%'
-		  },'slow',function(){
-			  
-			  })	
+		  },'slow',function(){	
+		  	$('.survol-wiki,.map-icones').css({
+				  'left': '-40%',
+  					'top': '-40%'
+				  })
+					 $('.map-icones').fadeIn(); 		 
+		  })
+				
 		});
 
 
 //ateliers		
-	$('.survol4').hover(function() {
-		
-      $(".secondplan").animate({
+    $('.survol4').hover(function() {
+		$('.map-icones,.survol-ateliers').hide();
+      	$(".secondplan").animate({
 		  	'left': '-50%',
   			'top': '-10%'
 		  },'fast',function(){
-			  $('.survol-ateliers').css({
+			  $('.survol-ateliers,.map-icones').css({
 				  'left': '-50%',
   					'top': '-10%'
-				  }).fadeIn()
+				  }).fadeIn(function(){
+					 $('.map-icones').fadeIn(); 		
+					  })
 			  })
 	},
 	function(){
-		$(".survol-ateliers").hide()
-		$(".secondplan, .survol-ateliers").animate({
+		$(".survol-ateliers,.map-icones").hide()
+		$(".secondplan").animate({
 		  	'left': '-40%',
   			'top': '-40%'
-		  },'slow',function(){
-			  
-			  })	
+		  },'slow',function(){	
+		  	$('.survol-ateliers,.map-icones').css({
+				  'left': '-40%',
+  					'top': '-40%'
+				  })
+					 $('.map-icones').fadeIn(); 		 
+		  })
+				
 		});
 
 //gazette		
-	$('.survol5').hover(function() {
-		
-      $(".secondplan").animate({
+    $('.survol5').hover(function() {
+		$('.map-icones,.survol-gazette').hide();
+      	$(".secondplan").animate({
 		  	'left': '-70%',
   			'top': '-60%'
 		  },'fast',function(){
-			  $('.survol-gazette').css({
+			  $('.survol-gazette,.map-icones').css({
 				  'left': '-70%',
   					'top': '-60%'
-				  }).fadeIn()
+				  }).fadeIn(function(){
+					 $('.map-icones').fadeIn(); 		
+					  })
 			  })
 	},
 	function(){
-		$(".survol-gazette").hide()
-		$(".secondplan, .survol-gazette").animate({
+		$(".survol-gazette,.map-icones").hide()
+		$(".secondplan").animate({
 		  	'left': '-40%',
   			'top': '-40%'
-		  },'slow',function(){
-			  
-			  })	
+		  },'slow',function(){	
+		  	$('.survol-gazette,.map-icones').css({
+				  'left': '-40%',
+  					'top': '-40%'
+				  })
+					 $('.map-icones').fadeIn(); 		 
+		  })
+				
 		});
 
 //cafette		
 	$('.survol6').hover(function() {
-		
-      $(".secondplan").animate({
+		$('.map-icones,.survol-cafette').hide();
+      	$(".secondplan").animate({
 		  	'left': '-60%',
   			'top': '-20%'
 		  },'fast',function(){
-			  $('.survol-cafette').css({
+			  $('.survol-cafette,.map-icones').css({
 				  'left': '-60%',
   					'top': '-20%'
-				  }).fadeIn()
+				  }).fadeIn(function(){
+					 $('.map-icones').fadeIn(); 		
+					  })
 			  })
 	},
 	function(){
-		$(".survol-cafette").hide()
-		$(".secondplan, .survol-cafette").animate({
+		$(".survol-cafette,.map-icones").hide()
+		$(".secondplan").animate({
 		  	'left': '-40%',
   			'top': '-40%'
-		  },'slow',function(){
-			  
-			  })	
+		  },'slow',function(){	
+		  	$('.survol-cafette,.map-icones').css({
+				  'left': '-40%',
+  					'top': '-40%'
+				  })
+					 $('.map-icones').fadeIn(); 		 
+		  })
+				
 		});
 
 
 //dortoir		
 	$('.survol7').hover(function() {
-		
-      $(".secondplan").animate({
+		$('.map-icones,.survol-dortoir').hide();
+      	$(".secondplan").animate({
 		  	'left': '-10%',
   			'top': '0%'
 		  },'fast',function(){
-			  $('.survol-dortoir').css({
+			  $('.survol-dortoir,.map-icones').css({
 				  'left': '-10%',
-  					'top': '-0%'
-				  }).fadeIn()
+  					'top': '0%'
+				  }).fadeIn(function(){
+					 $('.map-icones').fadeIn(); 		
+					  })
 			  })
 	},
 	function(){
-		$(".survol-dortoir").hide()
-		$(".secondplan, .survol-dortoir").animate({
+		$(".survol-dortoir,.map-icones").hide()
+		$(".secondplan").animate({
 		  	'left': '-40%',
   			'top': '-40%'
-		  },'slow',function(){
-			  
-			  })	
+		  },'slow',function(){	
+		  	$('.survol-dortoir,.map-icones').css({
+				  'left': '-40%',
+  					'top': '-40%'
+				  })
+					 $('.map-icones').fadeIn(); 		 
+		  })
+				
 		});
-
-//administration		
-	/*$('.survol8').hover(function() {
-      $(".secondplan").animate({
-		  	'left': '0%',
-  			'top': '-20%'
-		  },'fast',function(){
-			  $('.survol-inscription').css({
-				  'left': '0%',
-  					'top': '-20%'
-				  }).fadeIn()
-			  })
-	},
-	function(){
-		$(".survol-inscription").hide()
-		$(".secondplan, .survol-inscription").animate({
-		  	'left': '-40%',
-  			'top': '-40%'
-		  },'slow')	
-		});*/
-
-//gestion des icones (à cause du menu)
-/*$('nav a').hover(function(){
-	$('.aside-survol').hide()
-	},	
-	function(){
-	$('.aside-survol').show()	
-	})
-*/
-});
-
-/*
-$(".survol-quiz")
-$(".survol-wiki")
-$(".survol-ateliers")
-$(".survol-gazette")
-$(".survol-dortoir")
-$(".survol-inscription")
-$(".survol-cafette")*/
-			
+});			
 </script>

@@ -108,7 +108,7 @@ width: 210px;
 /*POPUP*/
 
 #vignette {
-padding-top: 8%;
+padding-top: 3%;
 z-index: 10;
 position: relative;
 }
@@ -236,17 +236,18 @@ overflow: hidden;}
   }
 
 /* START SURVOL */
-. m_layer{}
 .m_scroll:hover{cursor:pointer;} 
 .m_scroll{z-index:101;} 
 li.layer.m_layer {
-  width: 0px;
+  width: 100%;
+  height:0;
 }
 .aside-survol {
   position: relative;
   margin: 0 auto;
   box-sizing: border-box;
   margin-top: 45px;
+  display: block!important;
 }
 .aside-survol img {
   background: #fff;
@@ -255,17 +256,6 @@ li.layer.m_layer {
   border-radius: 50px;
   border: 5px solid #fff;
   box-shadow: rgba(0, 0, 0, 0.5) 1px 4px 8px 1px;
-}
-.aside-survol p {
-  font-family: goth;
-  text-transform: uppercase;
-  font-size: 18px;
-  background-color: #fff;
-  width: 110px;
-  padding: 5px;
-  box-shadow: rgba(0, 0, 0, 0.5) 1px 4px 8px 1px;
-  margin: -5px auto 0;
-  border-radius: 3px;
 }
 .scrollTo1 {
   width: 380px;
@@ -442,6 +432,77 @@ left: -40%;
 top: -40%;
 }
 
+.icon-cours {
+background: url("../../site_web/css/media/img/imgSurvol/icon-cours.png");
+background-position: center center;
+background-repeat:no-repeat;
+position: absolute;
+width: 180%;
+height: 180%;
+left: -40%;
+top: -40%;
+}
+.icon-quiz {
+background: url("../../site_web/css/media/img/imgSurvol/icon-quiz.png");
+background-position: center center;
+background-repeat:no-repeat;
+position: absolute;
+width: 180%;
+height: 180%;
+left: -40%;
+top: -40%;
+}
+.icon-wiki {
+background: url("../../site_web/css/media/img/imgSurvol/icon-wiki.png");
+background-position: center center;
+background-repeat:no-repeat;
+position: absolute;
+width: 180%;
+height: 180%;
+left: -40%;
+top: -40%;
+}
+.icon-ateliers {
+background: url("../../site_web/css/media/img/imgSurvol/icon-ateliers.png");
+background-position: center center;
+background-repeat:no-repeat;
+position: absolute;
+width: 180%;
+height: 180%;
+left: -40%;
+top: -40%;
+}
+.icon-gazette {
+background: url("../../site_web/css/media/img/imgSurvol/icon-gazette.png");
+background-position: center center;
+background-repeat:no-repeat;
+position: absolute;
+width: 180%;
+height: 180%;
+left: -40%;
+top: -40%;
+}
+.icon-cafette {
+background: url("../../site_web/css/media/img/imgSurvol/icon-cafe.png");
+background-position: center center;
+background-repeat:no-repeat;
+position: absolute;
+width: 180%;
+height: 180%;
+left: -40%;
+top: -40%;
+}
+.icon-dortoir {
+background: url("../../site_web/css/media/img/imgSurvol/icon-dortoir.png");
+background-position: center center;
+background-repeat:no-repeat;
+position: absolute;
+width: 180%;
+height: 180%;
+left: -40%;
+top: -40%;
+}
+
 /* END SURVOL */
 
 .secondplan {
@@ -505,8 +566,18 @@ position: absolute;
 
 /*VARIANTE*/
 
-#film1 {
-	
+#film1 .film_affiche {
+	width: 100%;
+	margin-bottom: 50px;
+}
+section.film_footer {
+  height: 260px;
+  position: absolute;
+  width: 960px;
+  top: 320px;
+  left: -40px;
+  background: #ececec;
+  padding-top: 10px;
 }
 #film1 li {
 width: 880px;	
@@ -514,53 +585,166 @@ width: 880px;
 #film1 .film_affiche img{
 	width:200px;
 }
-#film1 .film_video video{
+#film1 .film_video video {
   width: 250px;
-  position: absolute;
-  top: 30px;
-  right: 30px;
 }
-
 #film1 h1 {
   text-align: center;
   padding-bottom: 15px;
 }
-#film1 h2 {color: #F34235;}
+#film1 h2 {
+	color: #F34235;
+	margin-bottom: 15px;
+ 	 padding-top: 5px;
+}
 #film1 #video-h2 {
-  position: absolute;
-  top: 0;
-  right: 75px;
   text-transform: uppercase;
   font-size: 18px;
 }
 #film1 #netflix-h2 {
-  position: absolute;
-  top: 190px;
-  right: 70px;
   text-transform: uppercase;
   font-size: 18px;
 }
-.film_netflix img {
-  position: absolute;
-  top: 210px;
-  right: 120px;
+#film1 .film_netflix img {
   width: 85px;
+  margin: auto;
+  display: block;
+  padding: 30px 0px;
+}
+.film {
+  width: 33%;
+  float: left;
 }
 #film1 #sc-h2 {
-  position: absolute;
-  top: 310px;
-  right: 45px;
   text-transform: uppercase;
   font-size: 18px;
 }
-.film_critique img {
-  width: 70px;
-  top: 340px;
-  right: 123px;
-  position: absolute;
+#film1 .film_critique img {
+  margin: auto;
+  display: block;
+  padding: 45px 0px;
+}
+#film1 .clear {
+  height: 170px;
 }
 #film1 span {
   text-align: center;
   padding-bottom: 15px;
-  margin:0 auto;
+  margin: 0 auto;
+  display: block;
+}
+
+span.wrap {
+  display: block;
+  width: 880px;
+}
+input.film_recherche {
+  display: block;
+  width: 50%;
+  margin: auto;
+  height: 50px;
+  background-color: #ececec;
+  border: none;
+  outline: none;
+}
+.search h2 {
+  font-family: goth;
+  font-size: 50px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  color: #F34336;
+}
+
+aside#inscription h1 {
+  color: #F44336;
+  float: left;
+}
+aside#inscription h1 {
+  color: #F44336;
+  font-family: goth;
+  font-size: 50px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+input#contenu {
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+#insertioncours section {
+  width: 50%;
+  float: left;
+}
+#inscription_section1 {
+	
+}
+
+#inscription_section2 {
+	padding: 0 0px 0px 60px;
+  box-sizing: border-box;
+}
+#inscription_section2 p{
+padding: 15px 0px;
+  text-align: left;
+}
+input#titre {
+  height: 30px;
+  background-color: #ececec;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 5px;
+
+}
+input#avatar {
+  height: 30px;
+  background-color: #ececec;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 5px;
+
+}
+#inscription_section2 label {
+  width: 50px;
+  display: -webkit-inline-box;
+  font-family: arial;
+  font-size: 13px;
+}
+#inscription_section2 input, #inscription_section2 select {
+  width: 300px;
+  display: -webkit-inline-box;
+}
+select#genre {
+  height: 30px;
+  background-color: #ececec;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 5px;
+  width: 310px;
+  margin-left: 10px;
+}
+input#tag1, input#tag2, input#tag3 {
+  height: 30px;
+  background-color: #ececec;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 5px;
+  width: 24%;
+}
+input#resultat {
+  background-color: #F24235;
+  border: none;
+  outline: none;
+  padding: 10px;
+  float: left;
+  margin: 15px 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-family: arial;
+  letter-spacing: 1px;
+  font-size: 20px;
 }

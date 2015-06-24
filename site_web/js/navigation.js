@@ -28,7 +28,7 @@ $("#vignette").hide("slide", { direction: "left" }, "fast", function(){
 	$("#vignette").show("slide", { direction: "right" }, "fast");
 	$('#tabs').tabulous({});
 	$("#tabs_container").animate({boxShadow: '5px 42px 64px 2px rgba(0, 0, 0, 0.7)'});
-	//$("#tabs ul").prepend('<li><button id="but_cancel"><img src="css/media/img/wrong.png" /></button></li>');
+	$("#vignette").prepend('<div id="vign_overlay">');
 })
 }
 function fermetureAutoPage(){

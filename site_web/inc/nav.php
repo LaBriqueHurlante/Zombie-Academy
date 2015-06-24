@@ -27,7 +27,7 @@
 </div>
 <script>
 	$(document).ready(function(e) {
-        $('.nav a').hover(function() {
+        $('#menu2 a,#menuUti a').hover(function() {
     $( this ).addClass( "animated bounceIn" );
   }, function() {
     $( this ).removeClass( "animated bounceIn" );
