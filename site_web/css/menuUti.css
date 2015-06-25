@@ -79,4 +79,40 @@ span#coOuPas {
   color: #53AFDF;
   width: 140px;
   font-family: goth;
+}  
+
+
+
+
+/*ESPACE PERSO*/
+
+.contenant_global {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  top: 0;
+}
+.perso_global {
+  display: inline-block;
+  width: 45%;
+  vertical-align: top;
+  text-align: left;
+  padding: 40px 0 0 40px;
+}
+.perso_global p {
+  text-align: left;
+  font-size: 18px;
+  color: #8A8A8A;
+  padding: 20px 0 10px 30px;
+}
+.perso_global h1 {
+  text-align: left;
+  font-size: 60px;
+  color: #C900C9;
+}
+.global2 {
+	height: 100%;
+  background-color: #1F1F1F;
+  margin-left: 10px;
 }

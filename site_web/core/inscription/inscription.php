@@ -118,7 +118,7 @@ $( "#but_cancel" ).click(function( event ) {
 					function check_pseudo(){
 							$.ajax({
 								type: "post",
-								url:  "../inscription/register.php",
+								url:  "core/inscription/register.php",
 								data: {
 									'pseudo_check' : $("#pseudo").val()
 								},
@@ -136,7 +136,7 @@ $( "#but_cancel" ).click(function( event ) {
 					function check_password(){
 							$.ajax({
 								type: "post",
-								url:  "../inscription/register.php",
+								url:  "core/inscription/register.php",
 								data: {
 									'pass1_check' : $("#pass1").val(),
 									'pass2_check' : $("#pass2").val()
@@ -155,7 +155,7 @@ $( "#but_cancel" ).click(function( event ) {
 					function check_email(){
 							$.ajax({
 								type: "post",
-								url:  "../inscription/register.php",
+								url:  "core/inscription/register.php",
 								data: {
 									'email_check' : $("#email").val()
 								},
@@ -187,7 +187,7 @@ $( "#but_cancel" ).click(function( event ) {
 						} else {	
 							$.ajax({
 								type: "post",
-								url:  "../inscription/register.php",
+								url:  "core/inscription/register.php",
 								data: {
 									'nom'    : nom,
 									'prenom' : prenom,
@@ -231,7 +231,7 @@ $( "#but_cancel" ).click(function( event ) {
 						} else {
 							$.ajax({
 								type: 'post',
-								url: "../inscription/register.php",
+								url: "core/inscription/register.php",
 								data: {
 									'pseudo' : pseudo,
 									'pass' : pass
