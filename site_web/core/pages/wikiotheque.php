@@ -1,8 +1,8 @@
 
 <div id="tabs" class="tabs_bleu">
 		<ul>
-			<li><a href="#tabs-1" title="">Wikiothèque!</a></li>
-			<li><a href="#tabs-2" title="">Tab 2</a></li>
+			<li><a href="#tabs-1" class="tabulous_a" title="">Wikiothèque!</a></li>
+			<li><a href="#tabs-2" class="tabulous_a" title="">Tab 2</a></li>
 			<li><button id="but_cancel"><img src="css/media/img/wrong.png" /></button></li>
 		</ul>
 

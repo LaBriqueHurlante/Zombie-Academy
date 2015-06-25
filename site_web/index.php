@@ -22,7 +22,7 @@ include("core/connexion/includes/functions.php");
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/jquery.scrollTo.js"></script>
-<script src="js/tabulous/tabulous.min.js"></script>
+<!--<script src="js/tabulous/tabulous.min.js"></script>-->
 <script src="js/jquery.animate-shadow.js"></script>
 
 
@@ -60,6 +60,7 @@ else{
 include_once ("inc/footer.php");
 
 ?>
+
 </section>
 <script src="js/navigation.js"></script>
 <script src="js/map.js"></script>

@@ -8,9 +8,9 @@ $pseudo=(isset($_SESSION['pseudo']))?$_SESSION['pseudo']:'';
 
 <div id="tabs" class="tabs_rouge">
   <ul>
-    <li><a href="#tabs-1" title="">Cours du jour</a></li>
-    <li><a href="#tabs-2" title="">Chercher un cours</a></li>
-    <li><a href="#tabs-3" title="">Ajouter</a></li>
+    <li><a href="#tabs-1" class="tabulous_a" title="">Cours du jour</a></li>
+    <li><a href="#tabs-2" class="tabulous_a" title="">Chercher un cours</a></li>
+    <li><a href="#tabs-3" class="tabulous_a" title="">Ajouter</a></li>
     <li>
       <button id="but_cancel"><img src="css/media/img/wrong.png" /></button>
     </li>
@@ -91,7 +91,7 @@ $pseudo=(isset($_SESSION['pseudo']))?$_SESSION['pseudo']:'';
 //$('#imgTest').hide();
 $(document).ready(function() {
 
-$(" #tabs_container ").animate({ 'height':'500px'});	
+//$(" #tabs_container ").animate({ 'height':'500px'});	
 $( "#but_cancel" ).click(function( event ) {
   event.preventDefault();
   $( "#vignette" ).hide("slide", { direction: "right" }, "fast");

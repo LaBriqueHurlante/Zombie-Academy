@@ -35,7 +35,7 @@ top: 0;
 	color: #FAA39D;
 	transition:all linear 0.2s;
 }
-.tabs_rouge .tabulous_active {
+.tabs_rouge .ui-state-active a {
 	color: #F44336 !important;	
 }
 .tabs_rouge #but_cancel {background-color: #F44336;}
@@ -55,7 +55,7 @@ top: 0;
 	color: #FAA39D;
 	transition:all linear 0.2s;
 }
-.tabs_rougeFonce .tabulous_active {
+.tabs_rougeFonce .ui-state-active a {
 	color: #5B0000 !important;	
 }
 .tabs_rougeFonce #but_cancel {background-color: #5B0000;}
@@ -76,7 +76,7 @@ top: 0;
 	color: #FC9600;
 	transition:all linear 0.2s;
 }
-.tabs_orange .tabulous_active {
+.tabs_orange .ui-state-active a {
 	color: #FC9600  !important;	
 }
 .tabs_orange #but_cancel {background-color: #FC9600;}
@@ -96,7 +96,7 @@ top: 0;
 	color: #0e3d62;
 	transition:all linear 0.2s;
 }
-.tabs_bleu .tabulous_active {
+.tabs_bleu .ui-state-active a {
 	color: #1E83D4  !important;	
 }
 .tabs_bleu #but_cancel {background-color: #1E83D4;}
@@ -117,7 +117,7 @@ top: 0;
 	color: #2F2F2F ;
 	transition:all linear 0.2s;
 }
-.tabs_jaune .tabulous_active {
+.tabs_jaune .ui-state-active a {
 	color: #FFEB3B   !important;
 	background-color:#191919!important;	
 }
@@ -143,7 +143,7 @@ top: 0;
 	color: #FFEB3B ;
 	transition:all linear 0.2s;
 }
-.tabs_rose .tabulous_active {
+.tabs_rose .ui-state-active a {
 background: #191919 !important;
   color: #E91E63 !important;
 }
@@ -169,7 +169,7 @@ background: #191919 !important;
 	color: #5E165E ;
 	transition:all linear 0.2s;
 }
-.tabs_violet .tabulous_active {
+.tabs_violet .ui-state-active a {
 	color: #C900C9   !important;
 	background-color:#191919!important;	
 }
@@ -218,7 +218,7 @@ background: #191919 !important;
 	/*background: #544f6b;*/
 	text-decoration: none;
 	/*color: #8478B3;*/
-	
+	outline: none;
 	font-size: 30px;
   	text-transform: uppercase;
 	border-radius: 9px 9px 0 0;
@@ -234,6 +234,7 @@ background: #191919 !important;
 	position: relative;
 	background: white;
 	min-height: 200px;
+	clear: both;
 }
 
 #tabs_container div {
@@ -389,7 +390,7 @@ background: #191919 !important;
 	transform-origin: 50% 50%;
 }
 
-.tabulous_active {
+.ui-state-active a {
 	background: white !important;
 	color: #655c89 !important;
 }

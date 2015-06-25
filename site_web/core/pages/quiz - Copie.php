@@ -13,7 +13,6 @@
       <h1>Quiz du jour</h1>
       <span id="testH1">Go</span>
       <script>
-	  
 	  $("#testH1").click(function(){
 	  $("#tabs_contenu").hide();
 	  $("#tabs_contenu").load("../site_web/core/quizz/quiz7.html").fadeIn("fast");

@@ -3,7 +3,7 @@
 
             <div id="tabs" class="tabs_rougeFonce">
 		<ul>
-			<li><a href="#tabs-1" title="">Inscription</a></li>
+			<li><a href="#tabs-1" class="tabulous_a" title="">Inscription</a></li>
 			
             <li><button id="but_cancel"><img src="css/media/img/wrong.png" /></button></li>
 		</ul>

@@ -70,7 +70,6 @@ if ($id==0)
 			</div>           
 		</div><!--End tabs container-->
         
-<img id="imgTest" src="../site_web/css/media/img/zombie.png" />	
 	
 	</div><!--End tabs-->
 

@@ -1,9 +1,9 @@
 
 <div id="tabs" class="tabs_jaune">
 		<ul>
-			<li><a href="#tabs-1" title="">Atelier!</a></li>
-			<li><a href="#tabs-2" title="">Images</a></li>
-			<li><a href="#tabs-3" title="">Textes</a></li>
+			<li><a href="#tabs-1" class="tabulous_a" title="">Atelier!</a></li>
+			<li><a href="#tabs-2" class="tabulous_a" title="">Images</a></li>
+			<li><a href="#tabs-3" class="tabulous_a" title="">Textes</a></li>
             <li><button id="but_cancel"><img src="css/media/img/wrong.png" /></button></li>
 		</ul>
 

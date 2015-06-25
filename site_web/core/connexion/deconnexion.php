@@ -11,7 +11,7 @@ if ($id==0) erreur(ERR_IS_NOT_CO);
 
 <div id="tabs" class="tabs_rougeFonce">
 		<ul>
-			<li><a href="#tabs-1" title="">Déconnection</a></li>
+			<li><a href="#tabs-1" class="tabulous_a" title="">Déconnection</a></li>
             <li><button id="but_cancel"><img src="css/media/img/wrong.png" /></button></li>
 		</ul>
 

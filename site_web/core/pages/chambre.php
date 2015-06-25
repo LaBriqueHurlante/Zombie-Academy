@@ -31,10 +31,10 @@ $repertoire = "../../";
 ?>
 <div id="tabs" class="tabs_violet">
 		<ul>
-			<li><a href="#tabs-1" title="">Global</a></li>
-			<li><a href="#tabs-2" title="">Stats</a></li>
-            <li><a href="#tabs-3" title="">Récompenses</a></li>
-            <li><a href="#tabs-4" title="">Personnalisation</a></li>
+			<li><a href="#tabs-1" class="tabulous_a" title="">Global</a></li>
+			<li><a href="#tabs-2" class="tabulous_a" title="">Stats</a></li>
+            <li><a href="#tabs-3" class="tabulous_a" title="">Récompenses</a></li>
+            <li><a href="#tabs-4" class="tabulous_a" title="">Personnalisation</a></li>
             <li><button id="but_cancel"><img src="css/media/img/wrong.png" /></button></li>
 		</ul>
 
