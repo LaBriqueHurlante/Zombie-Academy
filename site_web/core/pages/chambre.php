@@ -72,9 +72,26 @@ $repertoire = "../../";
     <div id="tabs-3" class="tabs_violet">
       <h1>Récompenses</h1>
       Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. </div>
+      
     <div id="tabs-4" class="tabs_violet">
-      <h1>Personnalisation</h1>
-      Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. </div>
+      
+      <section class="contenant_global">
+        <section class="perso_global global1">
+          <h1 style="font-size: 50px;">Personnalisation</h1>
+          <input type="text" placeholder="Entrez votre description" id="contenu" name="contenu" />
+          
+          <input type="submit" class="perso_submit" value="Enregistrer" />
+        </section>
+        <section class="perso_global global2">
+        <form id="perso_form" onsubmit="return false;">
+          <p><label for="pseudo">Pseudo</label><input type="text" placeholder="<?php echo $donnees['pseudo']; ?>" id="pseudo" name="pseudo" /></p>
+          <p><label for="email">Email</label><input type="text" placeholder="<?php echo $donnees['email']; ?>" id="email" name="email" /></p>
+          <p><label for="pass1">Mot de passe</label><input type="password" placeholder="Mot de passe" id="pass1" name="pass1" required/></p>
+          <p><label for="pass2">Mot de passe</label><input type="password" placeholder="Confirme ton passe" id="pass2" name="pass2" required/></p>
+        </form>
+        </section>
+      </section>
+      </div>
   </div>
   <!--End tabs container--> 
   

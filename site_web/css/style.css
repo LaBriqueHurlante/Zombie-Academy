@@ -572,7 +572,7 @@ position: absolute;
 	margin-bottom: 50px;
 }
 
-/*VARIANTE*/
+/*COURS*/
 
 #film1 .film_affiche {
 	width: 100%;
@@ -680,8 +680,9 @@ input#contenu {
   box-sizing: border-box;
 }
 #insertioncours section {
-  width: 50%;
-  float: left;
+  width: 49%;
+  display: inline-block;
+  vertical-align: top;
 }
 #inscription_section1 {
 	
@@ -716,11 +717,11 @@ input#avatar {
 #inscription_section2 label {
   width: 50px;
   display: -webkit-inline-box;
-  font-family: arial;
-  font-size: 13px;
+  font-size: 14px;
+  font-family: lato;
 }
 #inscription_section2 input, #inscription_section2 select {
-  width: 300px;
+  width: 280px;
   display: -webkit-inline-box;
 }
 select#genre {
@@ -730,7 +731,7 @@ select#genre {
   outline: none;
   text-align: left;
   padding: 5px;
-  width: 310px;
+  width: 290px;
   margin-left: 10px;
 }
 input#tag1, input#tag2, input#tag3 {
@@ -755,4 +756,65 @@ input#resultat {
   font-family: arial;
   letter-spacing: 1px;
   font-size: 20px;
+}
+
+
+<!-- QUIZ -->
+
+.quiz_intro{
+  width: 50%;
+  background-color: #FF9700;
+  padding: 2rem;
+  margin: 5px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+.quiz_intro h1 {
+  width: 50%;
+  background-color: #FF9700;
+  padding: 2rem;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 40px;
+  cursor:default;
+}
+.quiz_intro h2 {
+  width: 50%;
+  background-color: #5a6b8c;
+  padding: 2rem;
+  box-sizing: border-box;
+  color: #C8D4EA;
+  cursor:default;
+}
+.quiz_intro span {
+  width: 50%;
+  background-color: #5a6b8c;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: block;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.quiz_intro span:hover {
+  background-color: #798BAE;
+  transition:all linear 0.1s;
+
+}
+#quiz_ouAlors {
+  float: right;
+  width: 40%;
+  height: 293px;
+  background-color: #FFD08A;
+  color: #FFFFFF;
+  line-height: 290px;
+  font-family: goth;
+  font-size: 28px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#quiz_ouAlors:hover {
+	background-color: #FF9700;
+	transition:all linear 0.1s;
 }

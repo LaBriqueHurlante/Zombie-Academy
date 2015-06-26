@@ -1,58 +1,30 @@
 <style>
-  /*css reset */
-  /*html, body, div, span, h1, h2, h3, h4, h5, h6, p, code, small, strike, strong, sub, sup, b, u, i {
-      border:0;
-      font-size:100%;
-      font:inherit;
-      vertical-align:baseline;
-      margin:0;
-      padding:0;
-  }*/
- /* article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-      display:block;
-  }*/
- /* body {
-      line-height:1;
-      font:normal 0.9em/1em"Helvetica Neue", Helvetica, Arial, sans-serif;
-  }
-  ol, ul {
-      list-style:none;
-  }
-  strong {
-      font-weight:700;
-  }*/
+
 #frame {
-  max-width: 620px;
   width: auto;
-  border: 1px solid #ccc;
+  /*border: 2px dashed #FB9500;*/
   background: #fff;
-  padding: 10px;
-  margin: 5% auto 0;
+  padding: 12px 12px 0px 12px;
+  margin: 0 auto;
   position: relative;
   z-index: 10;
-  max-height: 561px;
 }
- /* h1 {
-      font:normal bold 2em/1.8em"Helvetica Neue", Helvetica, Arial, sans-serif;
-      text-align:left;
-      border-bottom:1px solid #999;
-      padding:0;
-      width:auto
-  }*/
- /* h2 {
-      font:italic bold 1.3em/1.2em"Helvetica Neue", Helvetica, Arial, sans-serif;
-      padding:0;
-      text-align:center;
-      margin:20px 0;
-  }*/
-  p.pager {
-      margin:5px 0 5px;
-      font:bold 1em/1em"Helvetica Neue", Helvetica, Arial, sans-serif;
-      color:#999;
-  }
+p.pager {
+  margin: 5px 0 5px;
+  font: bold 1em/1em"Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #999;
+  float: right;
+}
+h2#question {
+  clear: both;
+  font-family: goth;
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
   img.question-image {
       display:block;
-      max-width:250px;
+      max-width:210px;
       margin:10px auto;
       border:1px solid #ccc;
       width:100%;
@@ -64,79 +36,112 @@
       margin:0;
       padding:0;
   }
-  #submitbutton {
-      background:#5a6b8c;
-  }
+#choice-block .choice-box {
+float:none;
+margin-right: 30px;
+}
+#submitbutton {
+  background: #5a6b8c;
+  display: block;
+  color: #fff;
+  width: 71%;
+  margin: 0 auto;
+}
   #submitbutton:hover {
       background:#7b8da6;
   }
-  #explanation {
-      margin:0 auto;
-      padding:20px;
-      width:75%;
-  }
-  .choice-box {
-      display:block;
-      text-align:center;
-      margin:8px auto;
-      padding:10px 0;
-      border:1px solid #666;
-      cursor:pointer;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-  }
+#explanation {
+  margin: 0 auto;
+  padding: 30px;
+  font-size: 21px;
+  text-align: justify;
+  font-family: lato;
+  background-color: #191919;
+  margin-bottom: 10px;
+  color: #fff;
+  width: 64%;
+  border-radius: 5px;
+  display:none;
+}
+.choice-box {
+  display: inline-block;
+  text-align: center;
+  margin: 10px 30px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  clear: both; 
+  font-family: goth;
+  font-size: 30px;
+  text-transform: uppercase;
+  background-color: #FFA621;
+  color: #fff;
+}
+#frame h1 {
+  text-align: left;
+  color: #FFBE5E;
+  float: left;
+  font-size: 18px;
+}
 
 </style>
 
-
-
-
-
 <div id = "frame" role = "content" ></div>
 
-<!--<script src="../../js/jquery.min.js"></script>-->
+
 <script>
- var quiztitle = "Social Security Quiz";
+ var quiztitle = "#saga #héros #cultureZ";
 
 
  var quiz = [
         {
-            "question" : "Q1: Who came up with the theory of relativity?",
-            "image" : "http://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Albert_Einstein_Head.jpg/220px-Albert_Einstein_Head.jpg",
+            "question" : "Q1: De quelle saga de jeux vidéo Léon S. Kennedy est-il issu ?",
+            "image" : "core/quizz/img/1.jpg",
             "choices" : [
-                                    "Sir Isaac Newton",
-                                    "Nicolaus Copernicus",
-                                    "Albert Einstein",
-                                    "Ralph Waldo Emmerson"
+                                    "Silent Hill",
+                                    "Dead Space",
+                                    "Resident Evil"
+                                    
                                 ],
-            "correct" : "Albert Einstein",
-            "explanation" : "Albert Einstein drafted the special theory of relativity in 1905.",
+            "correct" : "Resident Evil",
+            "explanation" : "Léon S. Kennedy apparait dans le deuxième épisode de la saga RESIDENT EVIL, il deviendra par la suite un héros récurrent de la série. On le retrouvera dans Resident Evil 4 et 6.",
         },
         {
-            "question" : "Q2: Who is on the two dollar bill?",
-            "image" : "http://upload.wikimedia.org/wikipedia/commons/thumb/9/94/US_%242_obverse-high.jpg/320px-US_%242_obverse-high.jpg",
-            "choices" : [
-                                    "Thomas Jefferson",
-                                    "Dwight D. Eisenhower",
-                                    "Benjamin Franklin",
-                                    "Abraham Lincoln"
-                                ],
-            "correct" : "Thomas Jefferson",
-            "explanation" : "The two dollar bill is seldom seen in circulation. As a result, some businesses are confused when presented with the note.",
-        },
-        {
-            "question" : "Q3: What event began on April 12, 1861?",
+            "question" : "Q2: L'armée des morts de Zack Snyder est un remake de quel film ?",
             "image" : "",
             "choices" : [
-                                    "First manned flight",
-                                    "California became a state",
-                                    "American Civil War began",
-                                    "Declaration of Independence"
+                                    "L'emprise des ténèbres de Wes Craven",
+                                    "Zombie de George Romero",
+                                    "Body snatchers de Abel Ferrara"
+                                  
                                 ],
-            "correct" : "American Civil War began",
-            "explanation" : "South Carolina came under attack when Confederate soldiers attacked Fort Sumter. The war lasted until April 9th 1865.",
+            "correct" : "Zombie de George Romero",
+            "explanation" : "L'armée des morts sorti en 2004 est le remake d’un des plus grands succès de George Romero : Zombie, sorti en 1978.",
         },
+        {
+            "question" : "Q3: De quelle série Rick Grimmes est­il le héros ?",
+            "image" : "core/quizz/img/3.jpg",
+            "choices" : [
+                                    "The walking dead",
+                                    "Z nation",
+                                    "In the flesh"
+                                    
+                                ],
+            "correct" : "The walking dead",
+            "explanation" : "Rick Grimes apparait pour la première fois en octobre 2004 dans le comics The Walking Dead. Depuis 2010 c’est Andrew Lincoln qui joue le rôle de Rick dans l’adaptation en série télé.",
+        },
+		{
+            "question" : "Q4: De quel film est tirée cette image?",
+            "image" : "core/quizz/img/2.jpg",
+            "choices" : [
+                                    "land of the dead de George R. Romero",
+                                    "La Nuit des morts-vivants de George R. Romero",
+                                    "Bienvenue à Zombieland de Ruben Fleischer"
+                                    
+                                ],
+            "correct" : "La Nuit des morts-vivants de George R. Romero",
+            "explanation" : "Cette image est tirée de La Nuit des morts-vivants, un des premiers grands succès de George R. Romero sorti en 1968.",
+        }
      
 
     ];
@@ -166,14 +171,15 @@
 
      function nextQuestion() {
          submt = true;
-         $('#explanation').empty();
+         $('#explanation').empty().hide();
          $('#question').text(quiz[currentquestion]['question']);
-         $('#pager').text('Question ' + Number(currentquestion + 1) + ' of ' + quiz.length);
+         $('#pager').text('Question ' + Number(currentquestion + 1) + ' sur ' + quiz.length);
+		 $('#frame').fadeIn();
          if (quiz[currentquestion].hasOwnProperty('image') && quiz[currentquestion]['image'] != "") {
              if ($('#question-image').length == 0) {
                  $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question'])).insertAfter('#question');
              } else {
-                 $('#question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question']));
+                 $('#question-image').fadeIn().attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question']));
              }
          } else {
              $('#question-image').remove();
@@ -190,21 +196,24 @@
              $('.choice').eq(choice).css({
                  'background-color': '#50D943'
              });
-             $('#explanation').html('<strong>Correct!</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+			 $('#question-image').slideUp();
+             $('#explanation').fadeIn().html('<span style="color: #50D943">Bien!</span> ' + htmlEncode(quiz[currentquestion]['explanation']));
              score++;
          } else {
              $('.choice').eq(choice).css({
                  'background-color': '#D92623'
              });
-             $('#explanation').html('<strong>Incorrect.</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+			 $('#question-image').slideUp();
+             $('#explanation').fadeIn().html('<span style="color: rgb(217, 38, 35);">FAUX</span> ' + htmlEncode(quiz[currentquestion]['explanation']));
          }
          currentquestion++;
-         $('#submitbutton').html('NEXT QUESTION &raquo;').on('click', function () {
+         $('#submitbutton').html('SUIVANT &raquo;').on('click', function () {
+			 $('#frame').hide();
              if (currentquestion == quiz.length) {
                  endQuiz();
              } else {
-                 $(this).text('Check Answer').css({
-                     'color': '#222'
+                 $(this).text('VALIDER').css({
+                     'color': '#fff'
                  }).off('click');
                  nextQuestion();
              }
@@ -220,7 +229,7 @@
          });
          $('.choice').on('mouseout', function () {
              $(this).css({
-                 'background-color': '#fff'
+                 'background-color': '#FFA621'
              });
          })
          $('.choice').on('click', function () {
@@ -246,11 +255,12 @@
 
 
      function endQuiz() {
-         $('#explanation').empty();
+         $('#explanation').empty().hide();
          $('#question').empty();
          $('#choice-block').empty();
          $('#submitbutton').remove();
-         $('#question').text("You got " + score + " out of " + quiz.length + " correct.");
+		 $('#frame').fadeIn();
+         $('#question').text("Vous avez trouvé " + score + " sur " + quiz.length + " réponses");
          $(document.createElement('h2')).css({
              'text-align': 'center',
              'font-size': '4em'
@@ -269,26 +279,29 @@
          //add pager and questions
          if (typeof quiz !== "undefined" && $.type(quiz) === "array") {
              //add pager
-             $(document.createElement('p')).addClass('pager').attr('id', 'pager').text('Question 1 of ' + quiz.length).appendTo('#frame');
+             $(document.createElement('p')).addClass('pager').attr('id', 'pager').text('Question 1 sur ' + quiz.length).appendTo('#frame');
              //add first question
              $(document.createElement('h2')).addClass('question').attr('id', 'question').text(quiz[0]['question']).appendTo('#frame');
              //add image if present
              if (quiz[0].hasOwnProperty('image') && quiz[0]['image'] != "") {
                  $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[0]['image']).attr('alt', htmlEncode(quiz[0]['question'])).appendTo('#frame');
              }
-             $(document.createElement('p')).addClass('explanation').attr('id', 'explanation').html('&nbsp;').appendTo('#frame');
+             
 
              //questions holder
              $(document.createElement('ul')).attr('id', 'choice-block').appendTo('#frame');
 
              //add choices
              addChoices(quiz[0]['choices']);
+			 
+			 //explication
+			 $(document.createElement('p')).addClass('explanation').attr('id', 'explanation').html('&nbsp;').appendTo('#frame');
 
              //add submit button
-             $(document.createElement('div')).addClass('choice-box').attr('id', 'submitbutton').text('Check Answer').css({
+             $(document.createElement('div')).addClass('choice-box').attr('id', 'submitbutton').text('VALIDER').css({
                  'font-weight': 700,
-                 'color': '#222',
-                 'padding': '30px 0'
+                 'color': '#fff',
+                 'padding': '20px 0'
              }).appendTo('#frame');
 
              setupButtons();

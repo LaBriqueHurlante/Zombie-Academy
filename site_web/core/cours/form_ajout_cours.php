@@ -11,8 +11,7 @@ if ($id>0)
     echo '    -     ';
 }
 ?>
-<html>
-  <body>
+
     <section id="inscription">
         <h1> Ajout : </h1>
         <!-- formulaire -->
@@ -53,5 +52,3 @@ if ($id>0)
           </p>
         </form>
     </section>
-  <body>
-</html>

@@ -202,7 +202,6 @@ background: #191919 !important;
 #tabs,#tabs2,#tabs3,#tabs4,#tabs5 {
 	width: 60%;
 	margin: 0 auto;
-	margin-bottom: 40px;
 	z-index: 10;
   	position: relative;
 	transition:height 0.5s;
@@ -238,9 +237,9 @@ background: #191919 !important;
 	clear: both;
 }
 
-#tabs_container div {
+/*#tabs_container div {
 	margin-right: 40px;
-}
+}*/
 
 .transition {
 	-webkit-transition: all .3s ease-in-out;

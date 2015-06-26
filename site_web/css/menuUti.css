@@ -95,10 +95,11 @@ span#coOuPas {
 }
 .perso_global {
   display: inline-block;
-  width: 45%;
+  width: 49%;
   vertical-align: top;
   text-align: left;
-  padding: 40px 0 0 40px;
+  padding: 40px 40px 0 40px;
+  box-sizing: border-box;
 }
 .perso_global p {
   text-align: left;
@@ -114,5 +115,43 @@ span#coOuPas {
 .global2 {
 	height: 100%;
   background-color: #1F1F1F;
-  margin-left: 10px;
+  margin-left: 15px;
+}
+.global2 input {
+  height: 30px;
+  background-color: #2C2C2C;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 5px 0 5px 15px;
+}
+.global2 label {
+  width: 170px;
+  display: inline-block;
+  text-align: left;
+  color: #8A8A8A;
+}
+.global1 #contenu {
+  height: 200px;
+  background-color: #1F1F1F;
+  border: none;
+  margin-top: 35px;
+  outline: none;
+  font-family: lato;
+  margin-bottom: 25px;
+  float: none;
+  width: 100%;
+}
+.perso_submit {
+  background-color: #5D155E;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-family: Lato;
+  display: block;
+  margin: 0 auto;
+  outline: none;
+  width: 100%;
+  font-size: 18px;
+  text-transform: uppercase;
 }
