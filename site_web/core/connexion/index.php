@@ -9,9 +9,7 @@ if (!isset($_REQUEST['ajax'])){
 	echo '
 	<link href="../../css/style.css" rel="stylesheet" type="text/css">
 <link href="../../css/menuUti.css" rel="stylesheet" type="text/css">
-<link href="../../css/tabulous.css" rel="stylesheet" type="text/css">
 <link href="../../css/animate.min.css" rel="stylesheet" type="text/css">
-
 <script src="../../js/jquery.min.js"></script>
 <script src="../../js/jquery-ui.min.js"></script>
 <script src="../../js/tabulous/tabulous.min.js"></script>
@@ -63,7 +61,9 @@ if ($id==0)
 
 		<p><input type="submit" id="bRegister" class="btn btn-success" value="Connexion" /></p>
         </form>
-		<a href="../inscription/inscription.php">Pas encore inscrit ?</a>
+        <div class="nav">
+		<a href="../site_web/core/inscription/inscription.php">Pas encore inscrit ?</a>
+        </div>
      <?php
 }
 ?>	              
@@ -80,14 +80,10 @@ if ($id==0)
 
 <script>
 
-// Image animation + Fermeture de la vignette via Bouton CLOSE
+// Fermeture de la vignette via Bouton CLOSE
 
-//$('#imgTest').hide();
+
 $(document).ready(function() {
-	
-	/*$('#imgTest').show().delay( 100 ).animate({
-		top:'10px'
-		});*/
 
 $( "#but_cancel" ).click(function( event ) {
   event.preventDefault();

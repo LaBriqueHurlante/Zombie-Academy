@@ -2,7 +2,8 @@
 <div id="tabs" class="tabs_orange">
   <ul>
     <li><a href="#tabs-1" class="tabulous_a" title="">Quiz du jour</a></li>
-    <li><a href="#tabs-2" class="tabulous_a" title="">Chercher un quiz</a></li>
+    <li><a href="#tabs-2" class="tabulous_a" title="">Rechercher</a></li>
+    <li><a href="#tabs-3" class="tabulous_a" title="">Ajouter</a></li>
     <li>
       <button id="but_cancel"><img src="css/media/img/wrong.png" /></button>
     </li>
@@ -29,6 +30,7 @@
           
       </section>
     <div id="tabs-2" class="tabs_orange"> </div>
+    <div id="tabs-3" class="tabs_orange"> </div>
   </div>
   <!--End tabs container--> 
 </div>

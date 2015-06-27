@@ -80,7 +80,6 @@ $( "#but_cancel" ).click(function( event ) {
 			<section id="connexion">
 			</section>
 
-			<!--<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>-->
 			<script>
 				$(document).ready(function(){
 					

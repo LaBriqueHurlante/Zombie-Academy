@@ -154,4 +154,6 @@ span#coOuPas {
   width: 100%;
   font-size: 18px;
   text-transform: uppercase;
+  cursor: pointer;
 }
+.perso_submit:hover {background-color: #C900C9;transition:all linear 0.1s;}

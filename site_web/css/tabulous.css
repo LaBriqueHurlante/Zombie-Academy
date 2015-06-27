@@ -108,13 +108,13 @@ top: 0;
 	color: #191919;
 }
 .tabs_jaune li a {
-	background-color: #191919  ;
-	color: #FFEB3B;
+	background-color: #FFEB3B  ;
+	color: #191919;
 	transition:all linear 0.2s;
 }
 .tabs_jaune li a:hover {
-	background-color: #FFEB3B;
-	color: #2F2F2F ;
+	background-color: #2F2F2F;
+	color: #FFEB3B ;
 	transition:all linear 0.2s;
 }
 .tabs_jaune .ui-state-active a {
@@ -125,7 +125,11 @@ top: 0;
 	background-color:#191919;
 }
 .tabs_jaune #but_cancel {background-color: #FFF056;}
-
+.tabs_jaune h1 {
+  text-align: left;
+  margin-bottom: 10px;
+  color: #FFF056;
+}
 
 								/*rose*/
 
