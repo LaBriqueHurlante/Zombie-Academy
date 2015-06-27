@@ -15,9 +15,9 @@
 #menuUti .cerveau-avatar {
   width: 100px;
   height: 100px;
-  background-color: #D54345;
+  background-color: #191919;
   border-radius: 50px;
-  border: 4px dashed #fff;
+  border: 4px solid #D44043;
   box-sizing: border-box;
   margin: auto;
 }
@@ -33,33 +33,34 @@ img.small_image {
   width: 14px;
 }
 #main_wrapper form {
-	width:840px;
-    font-size: 16px;
-    /*background: #495C70;*/
-    /*padding: 30px 30px 15px 30px;*/
-    /*border: 5px solid #53687E;*/
+font-size: 16px;
 }
+#main_wrapper fieldset {
+border:none;
+}
+/*guigui*/
+#main_wrapper input {
+box-sizing: border-box;  
+-webkit-box-sizing: border-box; 
+-moz-box-sizing: border-box;  
+outline: 0;  
+display: inline-block;  
+width: 400px;  
+padding: 7px;  
+border: 0;
+background-color: #ececec; 
+margin-bottom: 10px;  
+font: 16px Arial,Helvetica,sans-serif;
+height: 45px;
+text-align: left;
+}
+/*fin*/
+
 #main_wrapper label {
   width: 100px;
   text-align: left;
   position: relative;
   display: inline-block;
-}
-#main_wrapper input {
-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  outline: 0;
-  display: inline-block;
-  width: 400px;
-  padding: 7px;
-  border: 0;
-  border-bottom: 1px solid #ddd;
-  background: transparent;
-  margin-bottom: 10px;
-  font: 16px Arial,Helvetica,sans-serif;
-  height: 45px;
-  text-align: left;
 }
 #main_wrapper #bRegister {
   background-color: #5A0000;
@@ -76,11 +77,25 @@ box-sizing: border-box;
 	opacity:0.8;
 }
 span#coOuPas {
-  color: #53AFDF;
+  color: #D44043;
   width: 140px;
   font-family: goth;
 }  
+.suggestion {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 11px 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: lato;
+  width: 400px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  border-top: 1px solid #ececec;
 
+}
 
 
 
@@ -157,3 +172,26 @@ span#coOuPas {
   cursor: pointer;
 }
 .perso_submit:hover {background-color: #C900C9;transition:all linear 0.1s;}
+section.perso_recomp {
+  display: inline-block;
+  width: 33%;
+  position: relative;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+section.perso_recomp img {
+  width: 100%;
+}
+section.perso_recomp h1 {
+font-size: 50px;
+  color: #C900C9;
+}
+.perso_recomp:first-child {
+  background-color: #191919;
+}
+.perso_recomp:nth-child(2) {
+  background-color: #1F1F1F;
+}
+.perso_recomp:nth-child(3) {
+  background-color: #242424;
+}

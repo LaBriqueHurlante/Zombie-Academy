@@ -69,9 +69,21 @@ $repertoire = "../../";
         </section>
       </section>
     </div>
-    <div id="tabs-3" class="tabs_violet">
-      <h1>Récompenses</h1>
-      Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. </div>
+    <div id="tabs-3" class="tabs_violet">     
+     <section class="perso_recomp">
+     	<h1>Trophées</h1>
+     	<img src="../site_web/css/media/img/recompenses/Trophée carré.png" />
+     </section>
+     <section class="perso_recomp">
+     	<h1>Badges</h1>
+     	<img src="../site_web/css/media/img/recompenses/Trophée carré.png" />
+     </section>
+     <section class="perso_recomp">
+     	<h1>Ton Cerveau</h1>
+     	<img src="../site_web/css/media/img/recompenses/Trophée carré.png" />
+     </section>
+     
+     </div>
       
     <div id="tabs-4" class="tabs_violet">
       

@@ -30,9 +30,9 @@ include("core/connexion/includes/functions.php");
 <body>
 <section id="page">
 <?php
-
-include_once ("inc/header.php");
 include_once ("inc/map.php");
+include_once ("inc/header.php");
+
 include_once ("core/menuUtilisateur.php");
 ?>
 <div id="vignette" style="display:none;">
@@ -56,6 +56,7 @@ else{
 
  </div><!--Vignette tabs-->
  <?php
+include_once ("core/recompenses/recompenses.php"); 
 include_once ("inc/footer.php");
 
 ?>

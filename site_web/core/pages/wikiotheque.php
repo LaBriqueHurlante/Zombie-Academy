@@ -4,8 +4,14 @@
 .grid {
 
   height:500px;
-  width:800px;
+  width: 850px;
   margin: 0 auto;
+}
+.grid .element-item {
+	overflow:hidden;
+}
+.element-item img {
+  width: 100%;
 }
 .filter-button-group button{
 display: inline-block;
@@ -21,12 +27,11 @@ display: inline-block;
   text-shadow: 0 1px white;
   cursor: pointer;
 }
-.element-item  {
-float: left;
-  width: 184px;
-  height: 184px;
-  border: 2px solid #333;
-  border-color: hsla(0, 0%, 0%, 0.7);
+.element-item {
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
 }
 .grid:after {
   content: '';
@@ -41,8 +46,8 @@ float: left;
 </style>
 <div id="tabs" class="tabs_bleu">
 		<ul>
-			<li><a href="#tabs-1" class="tabulous_a" title="">Wikiothèque!</a></li>
-			<li><a href="#tabs-2" class="tabulous_a" title="">Tab 2</a></li>
+			<li><a href="#tabs-1" class="tabulous_a" title="">Wikiothèque</a></li>
+			<li><a href="#tabs-2" class="tabulous_a" title="">Recherche</a></li>
 			<li><button id="but_cancel"><img src="css/media/img/wrong.png" /></button></li>
 		</ul>
 
@@ -52,23 +57,26 @@ float: left;
 			<div id="tabs-1" class="tabs_bleu">
                 <!--isotope-->	
                 <div class="button-group filter-button-group">
-  <button data-filter="*">show all</button>
-  <button data-filter=".metal">metal</button>
-  <button data-filter=".transition">transition</button>
-  <button data-filter=".alkali, .alkaline-earth">alkali & alkaline-earth</button>
-  <button data-filter=":not(.transition)">not transition</button>
-  <button data-filter=".metal:not(.transition)">metal but not transition</button>
+  <button data-filter="*">Tout voir</button>
+  <button data-filter=".comics">Comics</button>
+  <button data-filter=".films">Films</button>
+  <button data-filter=".livres">Livres</button>
+  <button data-filter=".series">Séries</button>
+  <button data-filter=".jeux">Jeux</button>
 </div>
                 
                 			
                  <div class="grid">
-  <div class="element-item transition metal"><img src="../site_web/css/media/img/isotope/1.jpg" /></div>
-  <div class="element-item post-transition metal"><img src="../site_web/css/media/img/isotope/2.jpg" /></div>
-  <div class="element-item alkali metal"><img src="../site_web/css/media/img/isotope/3.jpg" /></div>
-  <div class="element-item transition metal"><img src="../site_web/css/media/img/isotope/4.jpg" /></div>
-  <div class="element-item lanthanoid metal inner-transition"><img src="../site_web/css/media/img/isotope/5.jpg" /></div>
-  <div class="element-item halogen nonmetal"><img src="../site_web/css/media/img/isotope/6.jpg" /></div>
-  <div class="element-item alkaline-earth metal"><img src="../site_web/css/media/img/isotope/1.jpg" /></div>
+  <div class="element-item comics"><img src="../site_web/css/media/img/isotope/comics_Walking_Dead.jpg" /></div>
+  <div class="element-item films"><img src="../site_web/css/media/img/isotope/film_World_War_Z.jpg" /></div>
+  <div class="element-item films"><img src="../site_web/css/media/img/isotope/film_Zombeavers.jpg" /></div>
+  <div class="element-item films"><img src="../site_web/css/media/img/isotope/film_Zombie.jpg" /></div>
+  <div class="element-item films jeux"><img src="../site_web/css/media/img/isotope/Jeu+film_Resident_Evil.jpg" /></div>
+  <div class="element-item jeux"><img src="../site_web/css/media/img/isotope/Jeu_Left_4_Dead_2.jpg" /></div>
+  <div class="element-item jeux"><img src="../site_web/css/media/img/isotope/Jeu_The_Last_of_Us.jpg" /></div>
+  <div class="element-item livres"><img src="../site_web/css/media/img/isotope/livre_Apocalypse_Zombie.jpg" /></div>
+  <div class="element-item series"><img src="../site_web/css/media/img/isotope/serie_The_Walking_Dead.jpg" /></div>
+  <div class="element-item series"><img src="../site_web/css/media/img/isotope/serie_znation.jpg" /></div>
 
 </div>
 

@@ -206,8 +206,8 @@ $( "#but_cancel" ).click(function( event ) {
 												$("#bRegister").addClass("btn-primary").css("color", "#ffffff");
 												
 												setTimeout(function(){
-												$( "#vignette" ).hide("slide", { direction: "right" }, "fast");
-												},1000)
+												$( "#vignette" ).hide("slide", { direction: "right" }, "fast");},1000);
+												$("#recomp_cont1, #recomp_cont2").delay(2000).show("slide", { direction: "down" }, "slow");
 												
 											} else {
 												$("#presentation").hide();

@@ -13,27 +13,26 @@ if (!isset($_REQUEST['ajax'])){
 <script src="../../js/jquery.min.js"></script>
 <script src="../../js/jquery-ui.min.js"></script>
 <script src="../../js/tabulous/tabulous.min.js"></script>
-<script src="../../js/jquery.animate-shadow.js"></script>';
+<script src="../../js/jquery.animate-shadow.js"></script>
+<script src="../../js/map.js"></script>';
 		$ajaxPath = "";
 }
 ?>
 <script>
 	var	ajaxPath = '<?php echo $ajaxPath;?>';
 </script>
-<div id="main_wrapper">
 
-<div id="tabs" class="tabs_rougeFonce">
-		<ul>
-			<li><a href="#tabs-1" title="">Connexion</a></li>
-            <li><button id="but_cancel"><img src="css/media/img/wrong.png" /></button></li>
-		</ul>
-
-		<div id="tabs_container">
-			
-
-			<div id="tabs-1" class="tabs_rougeFonce">
-			
-            <?php
+<div id="main_wrapper" class="nav">
+  <div id="tabs" class="tabs_rougeFonce">
+    <ul>
+      <li><a href="#tabs-1" title="">Connexion</a></li>
+      <li>
+        <button id="but_cancel"><img src="css/media/img/wrong.png" /></button>
+      </li>
+    </ul>
+    <div id="tabs_container">
+      <div id="tabs-1" class="tabs_rougeFonce">
+        <?php
 if ($id>0) 
 {
 	echo $_SESSION['pseudo'];
@@ -48,35 +47,33 @@ if ($id>0)
 if ($id==0) 
 {
 	?>
-	<form id="login_form" onsubmit="return false;">
-		<fieldset>
-			<legend>Connexion</legend>
-				<p>
-					<label for="pseudo">Pseudo :</label><input name="pseudo" type="text" id="login" /><br />
-					<label for="password">Mot de Passe :</label><input type="password" name="password" id="mdp" />
-				</p>
-		</fieldset>
-        
-        <span id="status2" style="color:#D43F42;"></span>
-
-		<p><input type="submit" id="bRegister" class="btn btn-success" value="Connexion" /></p>
+        <form id="login_form" onsubmit="return false;">
+          <fieldset>
+            <p>
+              <input name="pseudo" type="text" id="login" />
+            </p>
+            <p>
+              <input type="password" name="password" id="mdp" />
+            </p>
+          </fieldset>
+          <span id="status2" style="color:#D43F42;"></span>
+          <p>
+            <input type="submit" id="bRegister" class="btn btn-success" value="Connexion" />
+          </p>
         </form>
-        <div class="nav">
-		<a href="../site_web/core/inscription/inscription.php">Pas encore inscrit ?</a>
-        </div>
-     <?php
+        <a class="suggestion" href="../site_web/core/inscription/inscription.php">Pas encore inscrit ?</a>
+        <?php
 }
-?>	              
-			</div>           
-		</div><!--End tabs container-->
-        
-	
-	</div><!--End tabs-->
-
-</div><!--main wrapper-->
-
-
-
+?>
+      </div>
+    </div>
+    <!--End tabs container--> 
+    
+  </div>
+  <!--End tabs--> 
+  
+</div>
+<!--main wrapper--> 
 
 <script>
 
@@ -90,9 +87,8 @@ $( "#but_cancel" ).click(function( event ) {
   $( "#vignette" ).hide("slide", { direction: "right" }, "fast");
 });
 })
-</script>
-
-			<script>
+</script> 
+<script>
 				$(document).ready(function(){
 					
 				

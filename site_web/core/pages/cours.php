@@ -39,7 +39,7 @@ $pseudo=(isset($_SESSION['pseudo']))?$_SESSION['pseudo']:'';
         
         <section id="inscription_section1">
         	<h1>Ajouter un cours</h1>
-            <input type="text" style="height:200px;" placeholder="Entrez votre contenu" id="contenu" name="contenu" required/>
+            <textarea type="text" style="height:200px;" placeholder="Entrez votre contenu" id="contenu" name="contenu" required></textarea>
             <input id="resultat" type="submit" value="Ajouter" />
         </section>
         
