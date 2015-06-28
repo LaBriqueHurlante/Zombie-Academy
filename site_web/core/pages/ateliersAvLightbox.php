@@ -40,11 +40,7 @@ $repertoire = "../../css/media/img/imgAvatar/";
 			}
 		
 		 ?>"> 
-         <a href="LivingHell/site_web/<?php echo $repertoire.$row['photo']; ?>" 
-         	data-lightbox="<?php echo $row['photo'] ?>" 
-            data-title="<?php echo "<h2>".$row['titre']."</h2><p>".$row['auteur']."</p>" ?>">
-            	<img src="LivingHell/site_web/<?php echo $repertoire.$row['photo']; ?>"/>
-        </a>
+         <img src="LivingHell/site_web/<?php echo $repertoire.$row['photo']; ?>"/>
           <aside>
           <h2><?php echo $row['titre'] ?></h2>
           <p class="fan_auteur"><button data-filter=".<?php echo $row['auteur'] ?>"><?php echo $row['auteur'] ?></button></p>
@@ -56,12 +52,7 @@ $repertoire = "../../css/media/img/imgAvatar/";
 	?>
       </div>
     </div>
-    <div id="tabs-2" class="tabs_jaune"> 
-    	<aside class="search">
-        <h2 style="color: #FDEE55;">Recherche</h2>
-        <input type="text" name="recherche" class="film_recherche text" id="recherche"/>
-      </aside>
-    </div>
+    <div id="tabs-2" class="tabs_jaune"> </div>
     <div id="tabs-3" class="tabs_jaune">
     
     <h1 id="status">Montre tes talents à tes petits camarades !</h1>
@@ -176,7 +167,7 @@ $(function () {
 				$("#status").html("Merci, les professeurs vérifieront votre travail avant de l'exposer.");
 				setTimeout(function(){
 					$( "#vignette" ).hide("slide", { direction: "right" }, "fast");
-				},2500)	
+				},5000)	
 			}
         });
     });

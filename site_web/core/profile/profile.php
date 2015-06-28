@@ -4,7 +4,7 @@ session_start();
 $titre="Profil";
 include("includes/connexBDD.php");
 include("includes/header.php");
-define('ERR_IS_NOT_CO','Vous n etes pas connecté');
+define('ERR_IS_NOT_CO','Non connecté');
 if ($id==0) erreur(ERR_IS_NOT_CO);
 // Récupération de l'avatar ------
 

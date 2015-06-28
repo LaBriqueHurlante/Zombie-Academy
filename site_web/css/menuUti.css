@@ -4,8 +4,9 @@
   top: 0px;
   right: 0px;
   z-index: 11;
-  padding: 20px;
+  padding: 10px 0;
   text-align: center;
+  box-sizing: border-box;
 }
 #menuUti a {
 	color:#fff;

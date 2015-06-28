@@ -18,12 +18,14 @@ include("core/connexion/includes/functions.php");
 <link href="css/menuUti.css" rel="stylesheet" type="text/css">
 <link href="css/tabulous.css" rel="stylesheet" type="text/css">
 <link href="css/animate.min.css" rel="stylesheet" type="text/css">
+<link href="css/lightbox.css" rel="stylesheet" type="text/css">
 
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/jquery.scrollTo.js"></script>
 <script src="js/jquery.animate-shadow.js"></script>
 <script src="js/isotope.pkgd.js"></script>
+<script src="js/lightbox.js"></script>
 
 </head>
 

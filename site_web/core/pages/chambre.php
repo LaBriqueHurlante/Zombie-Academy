@@ -16,7 +16,7 @@ $lvl=(isset($_SESSION['level']))?(int) $_SESSION['level']:1;
 $id=(isset($_SESSION['id']))?(int) $_SESSION['id']:0;
 $pseudo=(isset($_SESSION['pseudo']))?$_SESSION['pseudo']:'';
 
-define('ERR_IS_NOT_CO','Vous n etes pas connecté');
+define('ERR_IS_NOT_CO','Non connecté');
 if ($id==0) erreur(ERR_IS_NOT_CO);
 // Récupération de l'avatar ------
 
@@ -46,12 +46,12 @@ $repertoire = "../../";
         </section>
         <section class="perso_global global2">
           <p>Niveau : <?php echo $donnees['niveau']; ?></p>
-          <p>Xp : <?php echo $donnees['xp']; ?></p>
+          <p>Xp : 400 points</p>
           <p>Pseudonyme : <?php echo $donnees['pseudo']; ?></p>
           <p>Prénom : <?php echo $donnees['Prenom']; ?></p>
           <p>Nom : <?php echo $donnees['Nom']; ?></p>
           <p>Description : <?php echo $donnees['Description']; ?></p>
-          <p>Membre depuis le : <?php echo $donnees['created']; ?></p>
+          <p>Etudiant depuis le : <?php echo $donnees['created']; ?></p>
         </section>
       </section>
     </div>
@@ -61,26 +61,31 @@ $repertoire = "../../";
           <h1>Stats</h1>
         </section>
         <section class="perso_global global2">
-          <p>Quiz Textes :</p>
-          <p>Quiz photos :</p>
-          <p>Quiz audio :</p>
-          <p>Quiz vidéo :</p>
-          <p>Total des Quiz :</p>
+          <p>Quiz Textes : 1 ­ 0 100%</p>
+          <p>Quiz photos : 2  ­1 66%</p>
+          <p>Quiz audio : 0 ­ 0 0%</p>
+          <p>Quiz vidéo : 0 ­ 0 0%</p>
+          <p>Questions répondues : 4</p>
+          <p>Total des Quiz : 1</p>
+ 
         </section>
       </section>
     </div>
     <div id="tabs-3" class="tabs_violet">     
      <section class="perso_recomp">
      	<h1>Trophées</h1>
-     	<img src="../site_web/css/media/img/recompenses/Trophée carré.png" />
+     	<img src="../site_web/css/media/img/recompenses/Trophéecarré.png" />
+        <img id="perso_items1" class="perso_items" src="../site_web/css/media/img/recompenses/BadgeA1_active.png" />
      </section>
      <section class="perso_recomp">
      	<h1>Badges</h1>
-     	<img src="../site_web/css/media/img/recompenses/Trophée carré.png" />
+     	<img src="../site_web/css/media/img/recompenses/badge.png" />
+        <img id="perso_items2" class="perso_items" src="../site_web/css/media/img/recompenses/BadgeA2_active.png" />
      </section>
      <section class="perso_recomp">
      	<h1>Ton Cerveau</h1>
-     	<img src="../site_web/css/media/img/recompenses/Trophée carré.png" />
+     	<img src="../site_web/css/media/img/recompenses/cerveaux.png" />
+        <img  id="perso_items3" class="perso_items" src="../site_web/css/media/img/recompenses/Cerveauactif.png" />
      </section>
      
      </div>

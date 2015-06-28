@@ -4,7 +4,7 @@ session_destroy();
 $titre="Déconnexion";
 include("includes/header.php");
 include("includes/functions.php");
-define('ERR_IS_NOT_CO','Vous n etes pas connecté couillon');
+define('ERR_IS_NOT_CO','Non connecté');
 if ($id==0) erreur(ERR_IS_NOT_CO);
 ?>
 

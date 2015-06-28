@@ -42,7 +42,7 @@ function decoVignette(){
 	setTimeout(function(){
 			$(".co").fadeOut('slow', function(){
 			$(".deco").fadeIn('slow');
-			$("#coOuPas").html("Vous n'êtes pas connecté");
+			$("#coOuPas").html("Non connecté");
 	});		
 			$( "#vignette" ).hide("slide", { direction: "left" }, "slow")}, 1000);
 }
