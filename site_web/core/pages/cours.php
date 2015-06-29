@@ -39,21 +39,16 @@ $pseudo=(isset($_SESSION['pseudo']))?$_SESSION['pseudo']:'';
         
         <section id="inscription_section1">
         	<h1>Ajouter un cours</h1>
-            <textarea type="text" style="height:200px;" placeholder="Entrez votre contenu" id="contenu" name="contenu" required></textarea>
+            <textarea type="text" style="height:200px;" placeholder="Entrez votre contenu" id="contenu" name="contenu" required>n oubliez pas vos battes.</textarea>
             <input id="resultat" type="submit" value="Ajouter" />
         </section>
         
         <section id="inscription_section2">
             <p>
             <label for="titre">Titre :</label>
-            <input type="text" placeholder="Entrez un titre" id="titre" name="titre" required/>
+            <input type="text" placeholder="Entrez un titre" id="titre" name="titre" value="Analyse cranienne du zombie"  required/>
             </p>
- 
-           <!-- <p>
-            <input type="hidden" name="MAX_FILE_SIZE" value="100000">
-            <label for="titre">Fichier :</label>
-            <input type="file" name="avatar" id="avatar">
-            </p>-->
+
             <p>
             Genre:
             <SELECT name="genre" id="genre" size="1">
@@ -66,11 +61,11 @@ $pseudo=(isset($_SESSION['pseudo']))?$_SESSION['pseudo']:'';
             </p>
             <p>
             <label for="tag1">Tags :</label>
-            <input type="text" placeholder="Entrez tag1" id="tag1" name="tag1" maxlength="16" required/>
+            <input type="text" placeholder="Entrez tag1" id="tag1" name="tag1" maxlength="16" value="tete" required/>
             
-            <input type="text" placeholder="Entrez tag2" id="tag2" name="tag2" maxlength="16" required/>
+            <input type="text" placeholder="Entrez tag2" id="tag2" name="tag2" maxlength="16" value="batte" required/>
             
-            <input type="text" placeholder="Entrez tag3" id="tag3" name="tag3" maxlength="16" required/>
+            <input type="text" placeholder="Entrez tag3" id="tag3" name="tag3" maxlength="16" value="homerun" required/>
             </p>
         </section>
         </form>

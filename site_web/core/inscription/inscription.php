@@ -17,31 +17,31 @@
 				<form id="register_form" onsubmit="return false;">
 					<p>
 						<!--<label for="nom">Nom</label>-->
-						<input type="text" placeholder="Nom" id="nom" name="nom" required/> 
+						<input type="text" placeholder="Nom" id="nom" name="nom" value="de la Rochechouchoir" required/> 
 						<br />
 
 						<!--<label for="prenom">Prénom</label>-->
-						<input type="text" placeholder="Prénom" id="prenom" name="prenom" required/>
+						<input type="text" placeholder="Prénom" id="prenom" name="prenom" value="Norbert" required/>
 						<br />
 
 						<!--<label for="pseudo">Pseudo</label>-->
-						<input type="text" placeholder="Pseudo" id="pseudo" name="pseudo" maxlength="16" required/>
+						<input type="text" placeholder="Pseudo" id="pseudo" name="pseudo" maxlength="16" value="norby" required/>
 						<small id="output_checkuser"></small>
                     	<br />
 						
 					
 						<!--<label for="pass1">Mot de passe</label>-->
-						<input type="password" placeholder="Pass" id="pass1" name="pass1" required/>
+						<input type="password" placeholder="Pass" id="pass1" name="pass1" value="123456" required/>
 						<small id="output_pass1"></small>
 						<br />
                         
 						<!--<label for="pass2">Confirmer</label>-->
-						<input type="password" placeholder="Confirme ton pass" id="pass2" name="pass2" required/> 
+						<input type="password" placeholder="Confirme ton pass" id="pass2" name="pass2" value="123456" required/> 
 						<small id="output_pass2"></small>
                         <br />
 						
 						<!--<label for="email">Email</label>-->
-						<input type="email" placeholder="Email" id="email" name="email" required/>
+						<input type="email" placeholder="Email" id="email" name="email" value="norby@letudiant.fr" required/>
 						<small id="output_email"></small>
                         <br />
                   

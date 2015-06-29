@@ -71,12 +71,12 @@ $repertoire = "../../css/media/img/imgAvatar/";
         <form id="insertionfan" method="POST" action="core/atelier/ajout_fan.php" enctype="multipart/form-data">
         <p>
             <label for="titre">Titre</label>
-            <input type="text" placeholder="Entrez un titre" id="titre" name="titre" required/>
+            <input type="text" placeholder="Entrez un titre" id="titre" name="titre" value="Mon beau dessin" required/>
 		</p>
         
         <p>
             <label for="auteur">Auteur</label>
-            <input type="text" placeholder="Auteur" id="auteur" name="auteur" required/>
+            <input type="text" placeholder="Auteur" id="auteur" name="auteur" value="Norby" required/>
 		</p>
         
         	<p>
@@ -97,7 +97,7 @@ $repertoire = "../../css/media/img/imgAvatar/";
 
 			<p>
             <label class="at_label" for="contenu">Contenu</label>
-            <textarea type="text" placeholder="Entrez votre contenu" id="contenu" name="contenu" required></textarea>
+            <textarea type="text" placeholder="Entrez votre contenu" id="contenu" name="contenu" required>Mon premier dessin de zombie</textarea>
 			</p>
             
             <p><input id="fan_but_register" type="submit" value="Ajouter" /></p>
